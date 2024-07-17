@@ -1,32 +1,373 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+.center {
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::selection {
+  background-color: #054f31;
+  color: white;
+}
+@keyframes fadeIn {
+    from {
+      transform:translateY(-15%) ;
+    }
+    to {
+      transform:translateY(70px) ;
+    }
+  }
+  @keyframes fade{
+    from {
+      opacity: 0 ;
+    }
+    to {
+  opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      transform:translateY(70px) ;
+    }
+    to {
+      transform:translateY(-15%);
+     opacity: 0;
+    }
+  }
+  .popup {
+    transform:translateY(100%) ;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  /* Apply the fade-out animation */
+  .popup-hidden {
+  
+    animation: fadeOut 0.5s forwards;
+  }
+
+  @keyframes spinIn {
+    from {
+      transform:rotate(360deg) ;
+    }
+    to {
+      transform:rotate(0) ;
+    }
+  }
+  
+  @keyframes spinOut {
+    from {
+      transform:rotate(0) ;
+    }
+    to {
+      transform:rotate(360deg);
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+  .fade {
+    animation: fade 1s forwards;
+  }
+  .spin {
+    transform:rotate(0) ;
+    animation: spinIn 0.5s forwards;
+  }
+  
+  /* Apply the spin-out animation */
+  .spin-hidden {
+  
+    animation: spinOut 0.5s forwards;
+  }
+
+
+
+  .bubble {
+    --c: #054f31;
+    color:white;
+    font-size: 16px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: #9a9a9a66;
 }
 
-* {
-  box-sizing: border-box;
+  .bubble span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+  .bubble:hover {
+    color: #d9ffe0;
 }
+
+  .bubble:hover span {
+    transform: translateY(0) scale(2);
+}
+
+  .bubble span:nth-child(1) {
+    --n: 1;
+}
+
+  .bubble span:nth-child(2) {
+    --n: 2;
+}
+
+  .bubble span:nth-child(3) {
+    --n: 3;
+}
+
+  .bubble span:nth-child(4) {
+    --n: 4;
+}
+
+
+@keyframes spread-up {
+  0% {
+    transform:translateY(0)rotate(180deg) ;
+width: 28px;
+  }
+  25% {
+    transform:translateY(80px)rotate(180deg) ;
+    
+  }
+  50% {
+    transform:translateY(80px)rotate(180deg) ;
+    
+  }
+  75% {
+    transform:translateY(80px)rotate(180deg) ;
+    
+  }
+  100% {
+    transform:translateY(80px)rotate(180deg) ;
+    width: 0px;
+  }
+}
+
+.spread-up {
+/* padding: 20px ;
+background-color: aqua; */
+  animation: spread-up 1s forwards  ;
+  /* width: 28px; */
+
+}
+
+@keyframes spread-right {
+  from {
+    transform: translate(-0px,- 0px); 
+  }
+  to {
+    transform:translate(-50px, -50px)  rotate(220deg);
+  }
+}
+
+.spread-right {
+  transform:rotate(0) ;
+  animation: spread-right 0.5s forwards;
+}
+
+@keyframes spread-left {
+  from {
+    transform:translateX(0px) ;
+  }
+  to {
+    transform:translateX(80px) rotate(90deg) ;
+  }
+}
+
+
+
+
+.spread-left {
+  transform:rotate(0) ;
+  animation: spread-left 0.5s forwards;
+}
+
+*{
+  font-size: 16px;
+}
+.bubble-classic  {
+  --c: #d9ffe0;
+  color:#d9ffe0;
+  border-radius: 20px;
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  background-color: #054f31;
+}
+
+.bubble-classic  span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.bubble-classic:hover {
+  color: #054f31;
+}
+
+.bubble-classic:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.bubble-classic  span:nth-child(1) {
+  --n: 1;
+}
+
+.bubble-classic  span:nth-child(2) {
+  --n: 2;
+}
+
+.bubble-classic  span:nth-child(3) {
+  --n: 3;
+}
+
+.bubble-classic  span:nth-child(4) {
+  --n: 4;
+}
+
+.bubble-white  {
+  --c: #054f31;
+  color:#121212;
+  font-size: 16px;
+  border-radius: 20px;
+padding: 30px 60px;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  background-color: #ffffff;
+}
+
+.bubble-white  span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.bubble-white:hover {
+  color: #d9ffe0;
+}
+
+.bubble-white:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.bubble-white  span:nth-child(1) {
+  --n: 1;
+}
+
+.bubble-white  span:nth-child(2) {
+  --n: 2;
+}
+
+.bubble-white  span:nth-child(3) {
+  --n: 3;
+}
+
+.bubble-white  span:nth-child(4) {
+  --n: 4;
+}
+/* @keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+opacity: 1;
+  }
+} */
+
+.fade-in {
+  opacity: 1;
+
+}
+
+.fade-out {
+  opacity: 0.1;
+}
+
+.partner video{
+  display: none;
+}
+
+.partner:hover .img {
+display: none;
+}
+.partner:hover video {
+  display: block;
+  }
+
+  .partner:hover h1 {
+font-size: 50px;
+transition: all 0.3s ease-out;
+    }
+    .partner:hover h2 {
+height: auto;
+      transition: all 0.3s ease-out;
+          }
+
+    .partner:not(:hover) h1 {
+      transition: all 0.3s ease-out;
+          }
+          .partner:not(:hover) h2 {
+            transition: all 0.3s ease-out;
+                }
+
+                /* For max-height */
+@media screen and (max-width: 1023px) {
+  .partner:hover h1 {
+    font-size: 35px !important;
+    transition: all 0.3s ease-out;
+        }
+}
+
+@media screen and (max-width: 768px) {
+  .partner:hover h1 {
+    font-size: 20px !important;
+    transition: all 0.3s ease-out;
+        }
+        .bubble-white  {
+          padding: 0px 20px;
+          font-size: 14px;
+        }
+}
+
+.guide video{
+  display: none;
+}
+
+.guide:hover img {
+display: none;
+}
+.guide:hover video {
+  display: block;
+  }

@@ -61,7 +61,10 @@
     color 0.15s ease,
     border-color 0.15s ease;
 }
-
+.img {
+  width: 900px;
+  height: 20px;
+}
 .card:hover,
 .card:focus,
 .card:active {
