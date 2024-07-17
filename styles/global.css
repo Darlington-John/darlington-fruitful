@@ -371,3 +371,32 @@ display: none;
 .guide:hover video {
   display: block;
   }
+
+  @keyframes fadIn {
+    from {
+      transform:translateY(100%) ;
+    }
+    to {
+      transform:translateY(0px) ;
+    }
+  }
+  
+  @keyframes fadOut {
+    from {
+      transform:translateY(0%) ;
+    }
+    to {
+      transform:translateY(100%);
+    }
+  }
+
+  .pop {
+    transform:translateY(100%) ;
+    animation: fadIn 0.5s forwards;
+  }
+  
+  /* Apply the fade-out animation */
+  .pop-hidden {
+  
+    animation: fadOut 0.5s forwards;
+  }

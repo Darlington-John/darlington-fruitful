@@ -1,6 +1,21 @@
-import { createContext, useEffect, useRef, useState} from 'react';
-const FruitfulContext = createContext();
-const FruitfulProvider = ({ children }) => {
+import { createContext, useEffect, useRef, useState, ReactNode } from 'react';
+interface FruitfulContextType {
+  isBenefit: boolean;
+  setIsBenefit: React.Dispatch<React.SetStateAction<boolean>>;
+  isVisible: boolean;
+  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  benefitRef: React.RefObject<HTMLDivElement>;
+  toggleBenefitPopup: () => void;
+  handleClickOutside: (event: MouseEvent) => void;
+  handleMouseEnter: (e: MouseEvent) => void;
+  hoverItems: Array<{ id: string; x: number; y: number; timeoutId: number | null }>;
+  isOverlayOpen: boolean;
+  setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const FruitfulContext = createContext<FruitfulContextType | undefined>(undefined);
+
+const FruitfulProvider = ({ children }: { children: ReactNode }) => {
     const [isBenefit, setIsBenefit] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const benefitRef = useRef(null);
