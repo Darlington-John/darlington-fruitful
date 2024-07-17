@@ -83,17 +83,17 @@ const Home = () => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <div className='flex h-screen   relative flex-col md:justify-end  justify-center  mx-auto overflow-hidden rounded-b-2xl'  style={elementStyle}>
-          <video  autoPlay  muted  loop src={"/assets/videos/hero.mp4"}  className='    z-10 top-0  absolute w-full xs:hidden'  style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"/>
-          <video  autoPlay  muted  loop src={"/assets/videos/mobileVid.mp4"}  className='    z-10 top-0  absolute w-full  hidden  xs:block' style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"/>
+          <video  autoPlay  muted  loop src={"/assets/videos/hero.mp4"}  className='    z-10 top-0  absolute w-full xs:invisible'  style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"/>
+          <video  autoPlay  muted  loop src={"/assets/videos/mobileVid.mp4"}  className='    z-10 top-0  absolute w-full  hidden  xs:block' style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  preload="auto"/>
           <div className="flex relative items-start z-20 md:py-6">
 <div className="flex flex-col gap-6  items-start w-full px-[66px] md:px-4  text-white md:gap-4 xs:gap-0 ">
-  <div className="text-white  text-[90px] leading-[80px] md:leading-none   md:flex gap-2 items-center md:text-[35px] md:flex-wrap  xs:text-2xl">
+  <div className="text-white  text-[90px] leading-[80px] md:leading-none   md:flex gap-2 items-center md:text-[35px] md:flex-wrap  xs:text-3xl  xs:pb-2">
     <h1 className="font-semibold 2xs:hidden">Finances</h1>
     <h1 className="font-semibold 2xs:hidden">figured out</h1>
     <h1 className="font-semibold 2xs:hidden">for you</h1>
     <h1 className="font-semibold 2xs:block hidden">Finances figured out for you</h1>
   </div>
-  <div className="flex text-[26px]  font-semibold  gap-2 xs:flex-wrap xs:text-base 2xs:text-lg">
+  <div className="flex text-[26px]  font-semibold  gap-2 xs:flex-wrap xs:text-base 2xs:text-lg xs:hidden">
   <h1 className={`  ease-out duration-300  ${fadeClass}`}>{currentHeader}</h1>
   <h1 >is a real Fruitful Member</h1>
   {/* tastes like she might be the one*/}
