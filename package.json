@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tailwindcss/jit": "^0.1.18",
     "file-loader": "^6.2.0",
     "framer-motion": "^11.3.2",
     "next": "^14.2.5",
