@@ -200,7 +200,6 @@ background-color: aqua; */
   color:#d9ffe0;
   border-radius: 20px;
 
-  text-align: center;
 
   position: relative;
   overflow: hidden;
@@ -399,4 +398,82 @@ display: none;
   .pop-hidden {
   
     animation: fadOut 0.5s forwards;
+  }
+
+  .navigation-wrapper {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  .dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+  }
+  
+  .dot {
+    border: none;
+    width: 10px;
+    height: 10px;
+    background: #444A47;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .dot:focus {
+    outline: none;
+  }
+  
+  .dot.active {
+    background: #ffffff;
+  }
+
+  .arrow {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    fill: #fff;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #00000080;
+    border-radius: 100%;
+  }  .arrow--left {
+    left: 5px;
+  }
+  
+  .arrow--right {
+    left: auto;
+    right: 5px;
+  }
+  
+  .arrow--disabled {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+  
+  .flow::-webkit-scrollbar {
+    height: 0px; /* Height of horizontal scrollbar */
+    width: 0px;
+  }
+
+  .flow::-webkit-scrollbar-thumb {
+    background: #88888800; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  .flow::-webkit-scrollbar-thumb:hover {
+    background: #55555500; /* Color of the scrollbar thumb on hover */
+  }
+  
+  .flow::-webkit-scrollbar-track {
+    background: #cccccc00; /* Color of the scrollbar track */
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
   }
