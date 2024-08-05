@@ -37,6 +37,7 @@ lightGreen: '#d9ffe0'
 
       sm: { max: '639px' },
       xs: { max: '575px' },
+      dxs: { max: '500px' },
       '2xs': { max: '400px' },
       
   },

@@ -1,4 +1,5 @@
 
+import { useMemo } from 'react';
 import { FruitfulProvider } from '../components/context';
 import Layout from '../components/layout';
 import '../styles/global.css';
@@ -12,14 +13,23 @@ const myFont = localFont({ src: [
   path: './../public/assets/fonts/neue-mid.otf',
       weight: '600',
 },
-] })
+{
+  path: './../public/assets/fonts/neue-bold.otf',
+      weight: '700',
+},
+{ path: './../public/assets/fonts/mono.ttf', weight: '800' }
+],
+
+})
+
 export default function App({ Component, pageProps }) {
+
     return (
       <FruitfulProvider>
-    <main className={myFont.className}>
+    <main className={`${myFont.className}`}>
 <Layout>
       {/* <FruitfulProvider> */}
-    <Component {...pageProps} />
+    <Component {...pageProps}   />
     </Layout>
     {/* </FruitfulProvider> */}
     </main>

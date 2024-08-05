@@ -10,8 +10,9 @@ const Button = (props: any) => {
   </div>
       )}
       {props.classic && (
-    <div className="bubble-classic   flex items-center  h-[40px] py-[25px] px-[30px] md:py-3 md:px-4  xs:text-xs text-base  xs:h-[30px] text-center">
-     {props.action}
+    <div className="bubble-classic   flex items-center  h-[40px] py-[25px] px-[30px] md:py-3 md:px-4  xs:text-xs text-base  xs:h-[30px] text-center relative">
+{props.action}
+ 
     <span></span><span></span><span></span><span></span>
   </div>
       )}

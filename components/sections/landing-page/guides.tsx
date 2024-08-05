@@ -2,6 +2,7 @@ import Button from "../../buttons";
 import Card from "../../cards";
 
 import { useState, useEffect } from 'react';
+import Slider from "../../slider";
 
 const Guides = () => {
 
@@ -102,7 +103,7 @@ thirdStyle: '💫 Enlightening',
         }
     ]
     return (
-        <section className="flex flex-col items-center  text-center gap-16 py-16">
+        <section className="flex flex-col   text-center gap-16 py-16  items-center  sm:items-stretch  sm:gap-6 ">
         <div className="flex flex-col gap-3 w-[700px]  lg:w-full px-4">
 <h1 className="text-[52px]  font-semibold  leading-[56px] lg:text-[32px] lg:leading-none xs:text-xl  xs:leading-none">
 A partner and a platform that
@@ -117,13 +118,13 @@ Take control of your finances with expert human help<br className='2xs:hidden'/>
 <Button link="/guidance" classic  action="Who are Guides" />
 </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center  2xs:flex-nowrap  2xs:overflow-x-scroll   2xs:w-screen 2xs:items-start  2xs:justify-start  2xs:py-4  flow  ">
+        <div className="flex flex-wrap items-center justify-center  dxs:flex-nowrap  dxs:overflow-x-scroll   dxs:w-screen dxs:items-start  dxs:justify-start  dxs:py-4  flow sm:hidden  ">
             {guides.map((data, index)=> (
- <Card guide name={data.name} img={data.img} video={data.video} rotate={data.rotate} rotateH={data.rotateH} {...data} key={index}/>
+ <Card guide name={data.name} img={data.img} video={data.video} rotate={data.rotate} rotateH={data.rotateH} {...data} key={index} more="More about" about  half  hfull/>
             ))}
            
         </div>
-
+<Slider guides={guides} about  hfull/>
     </section> 
       );
 }
