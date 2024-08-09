@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { FruitfulContext } from "./context";
 import Link from "next/link";
 import Button from "./buttons";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -69,14 +70,17 @@ const Navbar = () => {
       setIcon(isOverlayOpen ? BarsIcon : XmarkIcon);
     };
     const{isOverlayOpen, setIsOverlayOpen} = useContext(FruitfulContext);
+    const router = useRouter();
+    const { pathname } = router;
     return (  <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full px-[66px]   py-2  lg:px-5 md:top-4  xs:top-0 " >
 
 <Link href="/"  style={elementStyle}>
-{isScrolled ? (
-          <img src="/assets/icons/logoBlack.svg" alt="Second Logo"  className="w-[110px] xs:w-20"/>
+{pathname === '/guidance' ? (<img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[110px] xs:w-20  "/>): (isScrolled ? (
+          <img src="/assets/icons/logoBlack.svg" alt="Second Logo"  className="w-[110px] xs:w-20  "/>
         ) : (
-          <img src={ isOverlayOpen ?'/assets/icons/logoWhite.svg': '/assets/icons/logo.svg'} alt="" className={`w-[110px] xs:w-20 `}/>
-        )}
+          <img src={ isOverlayOpen ?'/assets/icons/logoWhite.svg': '/assets/icons/logo.svg'} alt="" className={`w-[110px] xs:w-20   `}/>
+        ))}
+
 
     </Link>
     <div className="md:hidden">
@@ -89,12 +93,13 @@ const Navbar = () => {
 <div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
 <Button link="/get-started" classic  action="Get started"/>
 </div>
-<button className="  h-10 w-10  bg-[#9a9a9a66]  rounded-full  md:flex items-center justify-center hidden xs:h-8 xs:w-8" onClick={handleToggleOverlay}>
-<img src={icon} alt="" className="w-4 xs:w-3" />
+<button className="  h-10 w-10  bg-[#9a9a9a66]  rounded-full  md:flex items-center justify-center hidden xs:h-8 xs:w-8 backdrop-blur-lg" onClick={handleToggleOverlay}>
+<img src={icon} alt="" className="w-4 xs:w-[12px]" />
 </button>
 </div>
     </nav>);
 }
+
  export const MembersBenefits  = (props: any) => {
     const{isBenefit, setIsBenefit, isVisible, setIsVisible,  benefitRef, toggleBenefitPopup, handleClickOutside} = useContext(FruitfulContext);
     const benefits =[
@@ -119,7 +124,7 @@ const Navbar = () => {
 ]
     return ( <div className="   z-40   flex flex-col gap-2 items-center " style={props.style}>
         <div className="font-medium text-white gap-6 py-4  px-8   backdrop-blur-lg bg-[#9a9a9a66] flex items-center justify-between rounded-xl  relative z-40 ">
-<div className="flex gap-2 items-center " onClick={toggleBenefitPopup}>
+<div className="flex gap-2 items-center  cursor-pointer" onClick={toggleBenefitPopup}>
 <h1>
     Member Benefits
 </h1>

@@ -159,7 +159,7 @@ features: [
     };
    
     return (
-     <div className='w-full flex flex-col gap-4'>
+     <div className='w-full flex flex-col gap-4 relative z-20'>
        {data.map((item, index) => (
        <AccordionItem
         key={index}
@@ -177,9 +177,37 @@ features: [
   const Faqs = () => {
     const divRef = useRef(null);
 
-
+const floats =[
+  {
+src: '/assets/images/push.png',
+left:0,
+top: 150
+},
+{
+  src: '/assets/images/flower-grow.png',
+  right:0,
+  top:0
+  },
+  {
+    src: '/assets/images/pluckf.png',
+    right:0,
+    top:400
+    },
+    {
+      src: '/assets/images/bounty.png',
+      left:0,
+      bottom:0
+      },
+]
     return ( 
-        <div className='p-20 px-60  flex lg:px-10 md:px-4 rounded-b-[40px]   ease-in duration-300' ref={divRef}>
+        <div className='p-20 px-60  flex lg:px-10 md:px-4 rounded-b-[40px]   ease-in duration-300  bg-white  relative' ref={divRef}>
+          {floats.map((float, index)=>(
+            <img src={float.src} className='absolute   z-10 w-60 h-60 object-cover lg:hidden' alt='' key={index} style={{
+              ...(float.top !== undefined ? { top: `${float.top}px` } : { bottom: `${float.bottom}px` }),
+              ...(float.left !== undefined ? { left: `${float.left}px` } : { right: `${float.right}px` }),
+            }}/>
+          ))}
+          
         <Accordion/>
         </div>
      );

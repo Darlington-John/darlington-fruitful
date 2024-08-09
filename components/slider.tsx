@@ -23,47 +23,11 @@ const Slider = (props:any) => {
   })
   
   const [currentSlide, setCurrentSlide] = useState(2)
-  const [about, setAbout] = useState(false);
-  const [isAboutVisible, setIsAboutVisible] = useState(false);
-  const aboutRef = useRef(null);
-  const toggleAboutPopup = () => {
-    if (!about) {
-      setAbout(true);
-      setIsAboutVisible(true);
-    } else {
-      setIsAboutVisible(false);
-      setTimeout(() => setAbout(false), 500);
-    }
-    
-  };
-  const handleClickOutside = (event) => {
-    if (aboutRef.current && !aboutRef.current.contains(event.target)) {
-      setIsAboutVisible(false);
-      setTimeout(() => setAbout(false), 500);
-    }
-    
-  };
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-  const [isMuted, setIsMuted] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+ 
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
-    <div className="sm:flex flex-col gap-3   hidden">
-                {/* {guides.map((data, index)=> (
- <Card guide name={data.name} img={data.img} video={data.video} rotate={data.rotate} rotateH={data.rotateH} {...data} key={index} more="More about" about  half  hfull/>
-            ))} */}
+    <div className="sm:flex flex-col gap-3   hidden ">
                 <div className="flex gap-3 items-center justify-center ">
           {
           guides.map((data,index) => {

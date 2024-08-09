@@ -6,11 +6,12 @@ import Hover from './hovers';
 import Overlay from './overlay';
 import { useRef } from 'react';
 import Footer, { PostFooter } from './footer';
+import Loader from './loader';
 
 export default function Layout({ children }) {
 
 
-    return (<div  className='overflow-hidden relative'>
+    return (<div className=' relative'>
         <Navbar/>
         <Overlay/>
         <LinkHoverListener/>

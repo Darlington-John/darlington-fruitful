@@ -61,6 +61,14 @@ const Card = (props: any) => {
 
   // Determine width and transition based on screen size and isInView
   const width = isSmallScreen ? '230px' : (isInView ? '230px' : '10px');
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (props.onScroll) {
+      props.onScroll(cardRef, props.id);
+    }
+  }, [props.onScroll, props.id]);
+
   return (
     <>
       {props.guide && (
@@ -197,7 +205,7 @@ Watch {props?.name}
         </div>
       )}
 {props.benefit && (
-  <div className='flex  bg-white rounded-[20px]  items-center justify-between  w-full px-[140px]  py-20  2xl:px-4  lg:flex-col      xs:py-10'>
+  <div className='flex  bg-white rounded-[20px]  items-center justify-between  w-full px-[140px]  py-20  2xl:px-4  lg:flex-col      xs:py-10     self-center sticky   self-center top-32'>
 <div className='flex flex-col  font-semibold gap-6   w-[410px] items-start md:self-start   xs:w-[400px]  2xs:w-full'>
   <div className='flex flex-col gap-2'>
 <h1 className='text-base xs:text-sm'>
@@ -221,6 +229,19 @@ Watch {props?.name}
 <img src={props.float} className='absolute bounce xs:static ' style={{top: `${props.top}`, left: `${props.left}`, width: `${props.width1}`}} alt=''/>
 <img src={props.float2} className='absolute bounce xs:static xs:self-end ' style={{top: `${props.top2}`, left: `${props.left2}`, width: `${props.width2}`}} alt=''/>
 <img src={props.float3} className='absolute bounce xs:hidden  md:self-end  ' style={{top: `${props.top3}`, left: `${props.left3}`, width: `${props.width3}`}} alt=''/>
+</div>
+  </div>
+)}
+{props.saving && (
+  <div className=' flex flex-col items-center gap-2 w-[270px] h-[390px]  rounded-2xl  shadow-xl  justify-between px-5  py-8  sm:py-4 sm:px-3  xs:py-2 xs:px-2  sticky   self-center top-32  bg-white  sm:w-[200px] sm:h-[280px] xs:h-[220px]  xs:w-[150px] ' ref={cardRef}  style={{transform: `rotate(${props.rotate}deg)`}}>
+<img src={props.img} alt='' className='w-[160px]  h-[160px] object-cover overflow-hidden  sm:w-32 sm:h-32  xs:w-24 xs:h-24'/>
+<div className='flex flex-col gap-2  sm:gap-0 '>
+<h1 className='text-lg font-semibold  xs:font-normal  leading-none   sm:text-base xs:text-sm '>
+  {props.header}
+</h1>
+<h1 className='text-base font-semibold  xs:font-normal  leading-[22px]   text-[#5b616b] sm:text-sm  sm:leading-tight  xs:text-xs  xs:leading-none'>
+  {props.main}
+</h1>
 </div>
   </div>
 )}

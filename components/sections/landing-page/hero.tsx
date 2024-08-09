@@ -4,6 +4,7 @@ import 'tailwindcss/tailwind.css'
 import Layout from "../../layout";
 import Button from "../../buttons";
 import { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
 const headerData = [
   { start: 0, end: 1.5, text: 'Maya' },
   { start: 1.5, end: 3, text: 'Andrew' },
@@ -76,6 +77,7 @@ const Home = () => {
     transition: 'width 0.1s ease-out', // Smooth 
     minWidth:' 93%',
   };
+  
     return (    
       <>
           <Head>

@@ -5,7 +5,7 @@ const MayaSpeech = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once:false });
     const float= {
-            transform: isInView ? "none" : "rotate(20deg)",
+            transform: isInView ? "none" : "translateY(200px)",
 
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
     }

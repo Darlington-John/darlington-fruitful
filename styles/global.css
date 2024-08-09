@@ -202,6 +202,9 @@ background-color: aqua; */
 *{
   font-size: 16px;
 }
+.bounce  {
+  animation: bounce 2s infinite alternate;
+}
 .bubble-classic  {
   --c: #d9ffe0;
   color:#d9ffe0;
@@ -214,9 +217,7 @@ background-color: aqua; */
   transition: 0.5s;
   background-color: #054f31;
 }
-.bounce  {
-  animation: bounce 2s infinite alternate;
-}
+
 .bubble-classic  span {
   position: absolute;
   width: 25%;
@@ -305,14 +306,55 @@ padding: 30px 60px;
 .bubble-white  span:nth-child(4) {
   --n: 4;
 }
-/* @keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-  to {
-opacity: 1;
-  }
-} */
+.bubble-orange  {
+  --c: #fef0c7;
+  color:#fef0c7;
+  border-radius: 20px;
+
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  background-color: #dc6803;
+}
+
+.bubble-orange  span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.bubble-orange:hover {
+  color: #dc6803;
+}
+
+.bubble-orange:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.bubble-orange  span:nth-child(1) {
+  --n: 1;
+}
+
+.bubble-orange  span:nth-child(2) {
+  --n: 2;
+}
+
+.bubble-orange  span:nth-child(3) {
+  --n: 3;
+}
+
+.bubble-orange  span:nth-child(4) {
+  --n: 4;
+}
 
 .fade-in {
   opacity: 1;
