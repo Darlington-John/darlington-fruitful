@@ -4,7 +4,6 @@ import EarnSavings from "./earn-savings";
 import { CSSProperties, useRef } from "react";
 import SavingsSecure from "./savings-secure";
 import StartSavingSmarter from "./start-saving-smarter";
-import SingleViewSection from "./view";
 import MishaSpeech from "./misha-speech";
 import MishaVid from "./misha-vid";
 import Faqs from "../landing-page/faqs";
