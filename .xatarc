@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Darlington-John-s-workspace-ju0kd2.us-east-1.xata.sh/db/darlington-fruitful",
+  "codegen": {
+    "output": "utils/xata.ts"
+  }
+}

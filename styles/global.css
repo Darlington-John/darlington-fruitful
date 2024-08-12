@@ -628,3 +628,7 @@ transform: translate(40px);
   background: #000;
 }
 
+.adow {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 40px 24px 0px, rgba(0, 0, 0, 0.03) 0px 18px 18px 0px, rgba(0, 0, 0, 0.03) 0px 4px 10px 0px;
+}
+

@@ -3,6 +3,7 @@ import { FruitfulContext } from "./context";
 import Link from "next/link";
 import Button from "./buttons";
 import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -56,14 +57,15 @@ const Navbar = () => {
        const XmarkIcon = '/assets/icons/Xmark.svg'
 
     const [icon, setIcon] = useState(BarsIcon);
+    const linkname = usePathname();
     useEffect(() => {
       const overlayElement = document.getElementById('myOverlay');
-      // Check initial height of overlayElement
-      const initialHeight = getComputedStyle(overlayElement).height;
-  
-      // Set isOverlayOpen based on initial height
-      setIsOverlayOpen(initialHeight === '60%');
-    }, []);
+  overlayElement.style.height = '0%';
+  setIsOverlayOpen(false);
+  setIcon(BarsIcon);
+    }, [linkname]);
+  // Get the current path
+
     const handleToggleOverlay = () => {
       toggleOverlay();
       setIsOverlayOpen(!isOverlayOpen);
@@ -75,7 +77,7 @@ const Navbar = () => {
     return (  <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full px-[66px]   py-2  lg:px-5 md:top-4  xs:top-0 " >
 
 <Link href="/"  style={elementStyle}>
-{pathname === '/guidance' ? (<img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[110px] xs:w-20  "/>): (isScrolled ? (
+{(pathname === '/guidance' || pathname === '/save' || pathname === '/invest' || pathname==='/pricing')  ? (<img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[110px] xs:w-20  "/>): (isScrolled ? (
           <img src="/assets/icons/logoBlack.svg" alt="Second Logo"  className="w-[110px] xs:w-20  "/>
         ) : (
           <img src={ isOverlayOpen ?'/assets/icons/logoWhite.svg': '/assets/icons/logo.svg'} alt="" className={`w-[110px] xs:w-20   `}/>
@@ -165,6 +167,10 @@ const Navbar = () => {
   } else {
     overlayElement.style.height = '100%';
   }
+    
+
+  // Use useEffect to watch for changes in the pathname
+
 };
 
 

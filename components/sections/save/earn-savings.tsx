@@ -61,7 +61,7 @@ Earn more than 10x the national average on your<br/> savings.* No account fees. 
         style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}   className="w-auto h-full ease-out duration-300  shadow-lg  mx-auto rounded-2xl"/>
         <img src={'/assets/images/vac.svg'} alt="" className="absolute  bottom-60 -left-16  bounce w-72"/>
         <img src={'/assets/images/home.svg'} alt="" className="absolute  bottom-32  -left-16  bounce w-72"/>
-        <img src={'/assets/images/self.svg'} alt="" className="absolute  top-40  -right-16  bounce w-72"/>
+        <img src={'/assets/images/self.svg'} alt="" className="absolute  top-40  -right-16  bounce w-72  lg:hidden  sm:block"/>
         </div>
             </section>
      );

@@ -28,10 +28,9 @@ export default function App({ Component, pageProps }) {
       <FruitfulProvider>
     <main className={`${myFont.className}`}>
 <Layout>
-      {/* <FruitfulProvider> */}
     <Component {...pageProps}   />
     </Layout>
-    {/* </FruitfulProvider> */}
+
     </main>
     </FruitfulProvider>
     );

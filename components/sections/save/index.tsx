@@ -31,6 +31,7 @@ const Save = () => {
       }
     return (  
         <div className="relative  z-30 bg-white  mb-[70vh] "   style={{...glow}}>
+          
 <EarnSavings/>
 <EarnMore glowRef1={glowRef1}  glow={glow} />
 <SavingsSecure  glowRef2={glowRef2}  glow={glow}/>

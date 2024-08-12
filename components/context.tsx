@@ -1,3 +1,4 @@
+import { usePathname } from 'next/navigation';
 import { createContext, useEffect, useRef, useState, ReactNode } from 'react';
 interface FruitfulContextType {
   isBenefit: boolean;
@@ -71,6 +72,8 @@ const FruitfulProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+    
+
     return (
       <FruitfulContext.Provider value={{ 
         isBenefit, setIsBenefit, isVisible, setIsVisible,  benefitRef, toggleBenefitPopup, handleClickOutside,  handleMouseEnter,  hoverItems, isOverlayOpen, setIsOverlayOpen

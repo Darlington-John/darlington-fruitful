@@ -245,6 +245,19 @@ Watch {props?.name}
 </div>
   </div>
 )}
+{props.investment && (
+  <div className='w-full flex  gap-6  items-center  p-6 padding-4 rounded-[32px]    h-[180px]   border-[#eceff4]  border    shadow-lg  xl:p-3  lg:h-auto  lg:gap-3   md:flex-col md:py-6  md:rounded-md '>
+<img src={props.img} alt=''  className='rounded-[16px]  h-[130px] w-[130px]  object-cover  lg:h-[100px]  lg:w-[100px]  md:self-end'/>
+<div className='flex flex-col gap-3  w-[450px] md:w-auto'>
+<h1 className='text-[28px]  font-bold leading-none  xl:text-2xl  md:font-semibold  sm:text-xl'>
+{props.header}
+</h1>
+<p className='text-base  font-semibold leading-[22px]  xl:text-sm'>
+{props.content}
+</p>
+</div>
+  </div>
+)}
     </>
   );
 };

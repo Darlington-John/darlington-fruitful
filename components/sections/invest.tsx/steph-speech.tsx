@@ -1,7 +1,7 @@
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-const MayaSpeech = () => {
+const StephSpeech = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once:false });
     const float= {
@@ -11,14 +11,13 @@ const MayaSpeech = () => {
     }
 
     return (  <section className="flex flex-col items-center justify-center py-40 gap-12  xs:px-4 xs:py-10  xs:gap-4 ">
-<h1 className="font-semibold  text-[77px] leading-[77px]  text-center  xl:text-5xl  xs:text-3xl 2xs:text-2xl" style={float} ref={ref}>“More than just feeling less <br className="md:hidden"  />
-stressed about my finances, I feel 
-<br className="md:hidden"/>a lot more in control of my life!”</h1>
+<h1 className="font-semibold  text-[77px] leading-[77px]  text-center  xl:text-5xl  xs:text-3xl 2xs:text-2xl" style={float} ref={ref}>“I was pretty fearful of<br className="md:hidden"  /> investing, I really needed
+<br className="md:hidden"/> someone to guide me.”</h1>
 <div className="flex items-center flex-col" style={float}>
-<img src={'/assets/images/smileMaya.jpg'} alt="" className="w-24 rounded-full  2xs:w-16"/>
+<img src={'/assets/images/steph.jpg'} alt="" className="w-24 h-24  rounded-full  2xs:w-16 2xs:h-16  object-cover"/>
 <div className="flex flex-col text-center items-center text-lg  2xs:text-base">
 <h1 className="font-bold"   style={float}>
-Maya
+Steph
 </h1>
 <h1 className="font-semibold"   style={float}>
 Real Fruitful Member
@@ -28,4 +27,4 @@ Real Fruitful Member
     </section>);
 }
  
-export default MayaSpeech;
+export default StephSpeech;

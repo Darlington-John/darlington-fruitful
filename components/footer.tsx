@@ -57,7 +57,7 @@ const footerLink=[
 ]
 
 const Footer = ( ) => {
-    return (<section className="bg-white    flex flex-col fixed bottom-20 z-20  w-full ">
+    return (<section className="bg-white    flex flex-col fixed bottom-20 z-20  w-full  max-w-[100vw]">
       
         <div className="flex  w-full items-center  justify-between px-16 lg:justify-center  md:px-4 ">
 <div className="p-4  grid grid-cols-4 bg-white gap-10 xl:grid-cols-3  lg:grid-cols-4 xs:px-0 2xs:grid-cols-2"> 
