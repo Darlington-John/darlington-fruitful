@@ -209,14 +209,14 @@ secondStyle: '🔍 Detailed',
 thirdStyle: '💫 Enlightening',
         }
     ]
-    return ( <div className="w-full ">
-    <div className="flex w-full items-center py-6       lg:py-4  sticky top-0   xs:py-3 xs:px-4  gap-10  relative   bg-white   px-10  overflow-hidden  z-40">
+    return ( <div className="w-full  4xl:h-screen">
+    <div className="flex w-full items-center py-6       lg:py-4  sticky top-0   xs:py-3 xs:px-4  gap-10  relative   bg-white   px-10  overflow-hidden  z-40 ">
   
-        {step === '2' && <Link href=''>
-<img src={'/assets/icons/arr-left.svg'} alt=""  className="w-6   "/>
-</Link>}
+        {step !== '1' && <button  onClick={() => router.back()}>
+<img src={'/assets/icons/arr-left.svg'} alt=""  className="w-6  4xl:w-8   "/>
+</button>}
         {step   &&( <Link href="/">
-        <img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[80px] xs:w-20  "/>
+        <img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[80px] xs:w-20   4xl:w-[]"/>
         </Link>)}
 
         <div className="w-screen  h-1 bg-lightGreen absolute bottom-0  -left-0   ">
@@ -225,10 +225,10 @@ thirdStyle: '💫 Enlightening',
             </div>
         </div>
     </div>
-{step ==='1' && (    <section className="flex  p-20  bg-[#FFF6EC]  items-center  gap-20  2xl:p-10  2xl:flex-col  xs:px-4">
+{step ==='1' && (    <section className="flex  p-20  bg-[#FFF6EC]  items-center  gap-20  2xl:p-10  2xl:flex-col  xs:px-4  h-full  4xl:px-[200px]">
 <div className="flex-1   p-3  flex flex-col  gap-8 px-10  2xl:self-start 2xl:w-[700px]  md:w-full xs:px-0  xs:gap-3"
 >
-<h1 className="text-[64px] font-semibold  leading-[70px]  text-center  text-green  md:text-5xl  xs:text-4xl">
+<h1 className="text-[64px] font-semibold  leading-[70px]  text-center  text-green  md:text-5xl  xs:text-4xl  ">
 Start your financial wellness journey
 </h1>
 <h1 className="text-lg font-semibold text-center text-green md:text-base  xs:text-sm">
@@ -283,9 +283,9 @@ Already have an account?
     </section>)}
 
     {step === '2' && (
-        <section className="flex flex-col  gap-10  items-center justify-center py-10 sm:py-5">
+        <section className="flex flex-col  gap-10  items-center justify-center py-10 sm:py-5 h-full">
 <div className="flex items-center flex-col gap-3">
-<h1 className="text-[30px]  font-semibold text-center  sm:text-2xl  sm:leading-none">
+<h1 className="text-[30px]  font-semibold text-center  sm:text-2xl  sm:leading-none 4xl:text-4xl">
 Why are you thinking about joining Fruitful?
 </h1>
 <h1 className="text-base font-semibold  text-base font-semibold xs:text-sm  text-center sm:text-sm">
@@ -350,9 +350,9 @@ onChange={(e) => setReason(e.target.value)}
     )}
 
 {step === '3' && (
-        <section className="flex flex-col  gap-10  items-center justify-center py-10">
+        <section className="flex flex-col  gap-10  items-center justify-center py-10 h-full">
 <div className="flex items-center flex-col gap-3">
-<h1 className="text-[30px]  font-semibold text-center">
+<h1 className="text-[30px]  font-semibold text-center 4xl:text-4xl">
 What are your major money goals?
 </h1>
 <h1 className="text-base font-semibold  text-base font-semibold xs:text-sm  text-center">
@@ -398,7 +398,7 @@ onChange={(e) => setGoal(e.target.value)}
         </section>
     )}
     {step ==='4' && (
-          <section className="flex flex-col   text-center gap-16 py-16  items-center  sm:items-stretch  sm:gap-6 ">
+          <section className="flex flex-col   text-center gap-16 py-16  items-center  sm:items-stretch  sm:gap-6  h-full">
          
          <div className="flex flex-col gap-3 w-[700px]  lg:w-full px-4">
 <h1 className="text-[52px]  font-semibold  leading-[56px] lg:text-[32px] lg:leading-none xs:text-xl  xs:leading-none">

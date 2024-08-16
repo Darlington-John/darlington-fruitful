@@ -29,7 +29,7 @@ const Invest = () => {
       } else if (isInView2) {
         glow.backgroundColor = "#eff7ff";
       } 
-    return (  <div className="relative  z-30 bg-white  mb-[70vh] " style={{...glow}}>
+    return (  <div className="relative  z-30 bg-white  mb-[70vh]  4xl:mb-[40vh]" style={{...glow}}>
 <SmarterInvesting/>
 <ManagementFees  glowRef1={glowRef1}  glow={glow}/>
 <InvestmentPov/>

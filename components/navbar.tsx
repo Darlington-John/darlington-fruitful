@@ -76,7 +76,7 @@ const Navbar = () => {
     const{isOverlayOpen, setIsOverlayOpen} = useContext(FruitfulContext);
     const router = useRouter();
     const { pathname } = router;
-    return (  <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full px-[66px]   py-2  lg:px-5 md:top-4  xs:top-0 " >
+    return (  <nav className="flex items-center justify-between  fixed top-8 left-0 z-[50] w-full px-[66px]   py-2  lg:px-5 md:top-4  xs:top-0   4xl:px-[200px]" >
 
 <Link href="/"  style={elementStyle}>
 {(pathname === '/guidance' || pathname === '/save' || pathname === '/invest' || pathname==='/pricing')  ? (<img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[110px] xs:w-20  "/>): (isScrolled ? (
@@ -130,7 +130,7 @@ const Navbar = () => {
     },
 ]
     return ( <div className="   z-40   flex flex-col gap-2 items-center " style={props.style}>
-        <div className="font-medium text-white gap-6 py-4  px-8   backdrop-blur-lg bg-[#9a9a9a66] flex items-center justify-between rounded-xl  relative z-40 ">
+        <div className="font-medium text-white gap-6 py-4  px-8   backdrop-blur-lg bg-[#9a9a9a66] flex items-center justify-between rounded-xl  relative z-40  ">
 <div className="flex gap-2 items-center  cursor-pointer" onClick={toggleBenefitPopup}>
 <h1>
     Member Benefits

@@ -82,7 +82,7 @@ const Card = (props: any) => {
     <>
       {props.guide && (
           <div
-          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative overflow-hidden    ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
+          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative overflow-hidden   4xl:h-[350px]    4xl:w-[260px]    ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
           style={{
             transform: `rotate(${props.rotate}deg) `,
             transition: 'transform  0.3s cubic-bezier(0.17, 0.55, 0.55, 1), width  1s cubic-bezier(0.17, 0.55, 0.55, 1)',
@@ -217,7 +217,7 @@ Choose your Guide
         </div>
       )}
 {props.benefit && (
-  <div className='flex  bg-white rounded-[20px]  items-center justify-between  w-full px-[140px]  py-20  2xl:px-4  lg:flex-col      xs:py-10     self-center sticky   self-center top-32'>
+  <div className='flex  bg-white rounded-[20px]  items-center justify-between  w-full px-[140px]  py-20  2xl:px-4  lg:flex-col      xs:py-10     self-center sticky   self-center top-32  4xl:py-40'>
 <div className='flex flex-col  font-semibold gap-6   w-[410px] items-start md:self-start   xs:w-[400px]  2xs:w-full'>
   <div className='flex flex-col gap-2'>
 <h1 className='text-base xs:text-sm'>
@@ -245,7 +245,7 @@ Choose your Guide
   </div>
 )}
 {props.saving && (
-  <div className=' flex flex-col items-center gap-2 w-[270px] h-[390px]  rounded-2xl  shadow-xl  justify-between px-5  py-8  sm:py-4 sm:px-3  xs:py-2 xs:px-2  sticky   self-center top-32  bg-white  sm:w-[200px] sm:h-[280px] xs:h-[220px]  xs:w-[150px] ' ref={cardRef}  style={{transform: `rotate(${props.rotate}deg)`}}>
+  <div className=' flex flex-col items-center gap-2 w-[270px] h-[390px]  rounded-2xl  shadow-xl  justify-between px-5  py-8  sm:py-4 sm:px-3  xs:py-2 xs:px-2  sticky   self-center top-32  bg-white  sm:w-[200px] sm:h-[280px] xs:h-[220px]  xs:w-[150px]  4xl:top-80 ' ref={cardRef}  style={{transform: `rotate(${props.rotate}deg)`}}>
 <img src={props.img} alt='' className='w-[160px]  h-[160px] object-cover overflow-hidden  sm:w-32 sm:h-32  xs:w-24 xs:h-24'/>
 <div className='flex flex-col gap-2  sm:gap-0 '>
 <h1 className='text-lg font-semibold  xs:font-normal  leading-none   sm:text-base xs:text-sm '>

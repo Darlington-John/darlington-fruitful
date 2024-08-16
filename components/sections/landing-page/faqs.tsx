@@ -112,7 +112,7 @@ features: [
     const float= {
             transform: isInView ? "none" : "rotate(-10deg)",
             opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0s"
     }
     return (
       <div className=" overflow-hidden text-[28px]  w-full flex flex-col bg-[#F5F7FB] rounded-[12px] " style={float} ref={ref}>
@@ -159,7 +159,7 @@ features: [
     };
    
     return (
-     <div className='w-full flex flex-col gap-4 relative z-20'>
+     <div className='w-full flex flex-col gap-4 relative z-20 4xl:w-[80%]  4xl:mx-auto'>
        {data.map((item, index) => (
        <AccordionItem
         key={index}

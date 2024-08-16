@@ -39,7 +39,7 @@ const EarnMore = ({glowRef1, glow}) => {
       return (inputValue * percentage).toFixed(2);
     };
   
-    return ( <section className="h-screen w-full flex  items-center justify-center px-[224px]  relative  2xl:px-20  lg:px-4  lg:justify-normal  md:h-auto  md:py-20  2xs:py-10" >
+    return ( <section className="h-screen w-full flex  items-center justify-center px-[224px]  relative  2xl:px-20  lg:px-4  lg:justify-normal  md:h-auto  md:py-20  2xs:py-10 4xl:h-[50vh]" >
             <div className="h-full blur-3xl absolute  w-screen left-0  mx-auto z-10" style={glow} ></div>
 <div className="flex gap-4  relative z-20 items-center  lg:flex-col  lg:w-full"  ref={glowRef1} style={glow}>
     <div className="flex flex-col gap-10 items-start  lg:self-start md:gap-4">

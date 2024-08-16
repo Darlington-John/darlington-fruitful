@@ -68,7 +68,7 @@ minimize taxes and expenses.`,
   const registerCardRef = (ref, id) => {
     cardRefs.current[id - 1] = ref.current;
   };
-    return (<div className="flex items-start  px-[208px]   relative  py-40  gap-96  2xl:gap-0  2xl:justify-between  xl:px-20   sm:px-6" ref={glowRef2}  style={glow}>
+    return (<div className="flex items-start  px-[208px]   relative  py-40  gap-96  2xl:gap-0  2xl:justify-between  xl:px-20   sm:px-6  4xl:justify-between" ref={glowRef2}  style={glow}>
      
 <div className="gap-16 items-start  flex  flex-col  h-[1500px]  sm:h-[700px] ">
 <div className="flex flex-col  leading-10 gap-10  sticky   self-center  top-1/2 transform -translate-y-1/2  items-start md:gap-0  ">

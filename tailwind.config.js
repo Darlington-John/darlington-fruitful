@@ -23,6 +23,7 @@ green: '#054f31',
 lightGreen: '#d9ffe0'
     },
     screens: {
+      '4xl': '1600px',
       '3xl': { max: '1535px' },
       
       '2xl': { max: '1400px' },

@@ -34,7 +34,7 @@ const InvestmentPov = () => {
         },
     ]
     return (
-          <section className="flex flex-col items-center  px-[66px] py-20  gap-8    2xl:px-4">
+          <section className="flex flex-col items-center  px-[66px] py-20  gap-8    2xl:px-4  4xl:px-[200px]">
 <div className="flex flex-col gap-0  ">
 <h1 className="text-[51px]  font-semibold text-center  md:text-3xl">
     Investment POV

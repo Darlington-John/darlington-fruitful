@@ -103,7 +103,7 @@ thirdStyle: '💫 Enlightening',
         }
     ]
     return (
-        <section className="flex flex-col   text-center gap-16 py-16  items-center  sm:items-stretch  sm:gap-6 ">
+        <section className="flex flex-col   text-center gap-16 py-16  items-center  sm:items-stretch  sm:gap-6   4xl:py-32">
         <div className="flex flex-col gap-3 w-[700px]  lg:w-full px-4">
 <h1 className="text-[52px]  font-semibold  leading-[56px] lg:text-[32px] lg:leading-none xs:text-xl  xs:leading-none">
 A partner and a platform that

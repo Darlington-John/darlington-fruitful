@@ -66,7 +66,7 @@ const guides =[
 ]
 const Members = () => {
     return (  
-        <section className="flex flex-col items-center  text-center gap-16 py-16 sm:items-stretch">
+        <section className="flex flex-col items-center  text-center gap-16 py-16 sm:items-stretch  4xl:py-24">
         <div className="flex flex-col gap-3 w-[700px]  lg:w-full px-4">
 <h1 className="text-[52px]  font-semibold  leading-[56px] lg:text-[32px] lg:leading-none xs:text-xl  xs:leading-none">
 Our members

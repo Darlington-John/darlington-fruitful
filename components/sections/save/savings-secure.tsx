@@ -1,5 +1,5 @@
 const SavingsSecure = ({glowRef2, glow}) => {
-    return ( <div className="flex  items-center justify-center gap-4  h-screen px-4  xs:flex-col  xs:h-auto  xs:py-20   2xs:py-16" style={glow}  ref={glowRef2}>
+    return ( <div className="flex  items-center justify-center gap-4  h-screen px-4  xs:flex-col  xs:h-auto  xs:py-20   2xs:py-16  4xl:h-[70vh]" style={glow}  ref={glowRef2}>
 <img src={'/assets/images/growMoney.png'} className="w-[600px]  xl:w-[500px] rounded-2xl h-auto  lg:w-[300px]  sm:w-[200px]   xs:self-start  2xs:self-end" alt=""/>
 <div className="flex flex-col  gap-2 items-start w-[420px]  xs:self-end  sm:w-[380px]  2xs:w-full ">
 <h1 className="text-[90px]  font-semibold  leading-[77px]   lg:text-[70px]  lg:leading-[60px]  md:text-[50px] md:leading-none sm:text-3xl  xs:text-2xl">

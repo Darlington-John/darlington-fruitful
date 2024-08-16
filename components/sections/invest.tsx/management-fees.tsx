@@ -39,7 +39,7 @@ const ManagementFees = ({glowRef1, glow}) => {
       return (inputValue * percentage).toFixed(2);
     };
   
-    return ( <section className="h-screen w-full flex  items-center justify-center px-[224px]  relative  2xl:px-20  lg:px-4  lg:justify-normal  md:h-auto  md:py-20  2xs:py-10  "  style={glow} ref={glowRef1}>
+    return ( <section className="h-screen w-full flex  items-center justify-center px-[224px]  relative  2xl:px-20  lg:px-4  lg:justify-normal  md:h-auto  md:py-20  2xs:py-10   4xl:h-[50vh]"  style={glow} ref={glowRef1}>
 <div className="flex gap-10  relative z-20 items-center  lg:flex-col  lg:w-full"   >
 
 <div className="bg-[#d7e8cd]  rounded-2xl  p-8 flex flex-col gap-6  w-[550px]  lg:self-end  sm:w-full  2xs:p-2  shrink-0">

@@ -20,6 +20,11 @@ const FruitfulContext = createContext<FruitfulContextType | undefined>(undefined
 
 const FruitfulProvider = ({ children }: { children: ReactNode }) => {
     const [isBenefit, setIsBenefit] = useState(false);
+    const linkname = usePathname();
+    useEffect(() => {
+setIsBenefit(false);
+    }, [linkname]);
+
     const [isVisible, setIsVisible] = useState(false);
     const benefitRef = useRef(null);
 

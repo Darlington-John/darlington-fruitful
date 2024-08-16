@@ -30,7 +30,7 @@ const Save = () => {
         glow.backgroundColor = "#E1D3F9";
       }
     return (  
-        <div className="relative  z-30 bg-white  mb-[70vh] "   style={{...glow}}>
+        <div className="relative  z-30 bg-white  mb-[70vh]  4xl:mb-[40vh]"   style={{...glow}}>
           
 <EarnSavings/>
 <EarnMore glowRef1={glowRef1}  glow={glow} />

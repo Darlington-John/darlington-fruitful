@@ -84,7 +84,7 @@ right: 340,
      hidden: 'xl:hidden'
         },
     ]
-    return ( <section  className="flex flex-col  gap-3 items-center justify-center  h-screen  md:hidden   relative  md:py-10 md:h-auto sm:py-4  "  ref={ref}>
+    return ( <section  className="flex flex-col  gap-3 items-center justify-center  h-screen  md:hidden   relative  md:py-10 md:h-auto sm:py-4   4xl:h-[70vh]  4xl:w-[80%]  4xl:mx-auto  4xl:my-20"  ref={ref}>
 <div className="flex flex-col gap-3 items-center justify-center sm:px-4 ">
 <h1 className="text-[51px] leading-[56px] font-semibold  text-center   md:text-4xl  sm:text-3xl">
 Your Goals<br className="sm:hidden"/> are ours too

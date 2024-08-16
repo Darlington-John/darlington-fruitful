@@ -81,7 +81,7 @@ For you and your partner</h1>
 </div>
 </div>
 <div className='flex items-center justify-center gap-10   flex-wrap dxs:px-4'>
-<div className={`flex flex-col justify-end  gap-10  h-[310px]    rounded-[32px]  shadow-2xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5  rotate-[-5deg] translate-y-6  dxs:rotate-[odeg]  dxs:w-full  ${ isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')} `}   style={divStyles(0)}
+<div className={`flex flex-col justify-end  gap-10  h-[310px]    rounded-[32px]  shadow-2xl  4xl:shadow-xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5  rotate-[-5deg] translate-y-6  dxs:rotate-[odeg]  dxs:w-full  ${ isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')} `}   style={divStyles(0)}
         onMouseEnter={() => handleMouseEnter(0)}
         onMouseLeave={handleMouseLeave}  >
 <div className='flex flex-col gap-2 w-full items-center'>
@@ -112,7 +112,7 @@ Start with monthly
 </button>
 </div>
 </div>
- <div className={`flex flex-col justify-end  gap-10  h-[310px]    rounded-[32px]  shadow-2xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5 relative    dxs:rotate-[odeg]  dxs:w-full  ${isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')} `}   style={divStyles(1)}
+ <div className={`flex flex-col justify-end  gap-10  h-[310px]    rounded-[32px]  shadow-2xl  4xl:shadow-xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5 relative    dxs:rotate-[odeg]  dxs:w-full  ${isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')} `}   style={divStyles(1)}
         onMouseEnter={() => handleMouseEnter(1)}
         onMouseLeave={handleMouseLeave}>
 <div className='absolute top-4  right-4 bg-lightGreen  rounded-full text-sm font-bold py-1 px-6 text-green '>
@@ -146,7 +146,7 @@ Start with quarterly
 </button>
 </div>
 </div>
-<div className={`flex flex-col justify-end  gap-10  h-[310px]     rounded-[32px]  shadow-2xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5 rotate-[5deg] translate-y-6   dxs:rotate-[odeg]  dxs:w-full  ${isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')}`}   style={divStyles(2)}
+<div className={`flex flex-col justify-end  gap-10  h-[310px]     rounded-[32px]  shadow-2xl  4xl:shadow-xl  hover:scale-110 transition duration-300 ease-in-out items-center p-5 rotate-[5deg] translate-y-6   dxs:rotate-[odeg]  dxs:w-full  ${isSmallScreen ? 'w-[360px]' : (isInView ? 'w-[360px]' : 'w-0')}`}   style={divStyles(2)}
         onMouseEnter={() => handleMouseEnter(2)}
         onMouseLeave={handleMouseLeave}>
 <div className='flex flex-col gap-2 w-full items-center'>

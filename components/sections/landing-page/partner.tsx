@@ -26,7 +26,7 @@ make money simple.
 Take control of your finances with expert human help<br className='2xs:hidden'/> and a single intuitive place to track it all.
 </h1>
         </div>
-        <div className="flex w-full items-center gap-5  px-[66px] md:px-4 2xs:flex-col">
+        <div className="flex w-full items-center gap-5  px-[66px]  4xl:px-[200px]  md:px-4 2xs:flex-col  4xl:gap-8">
 <div className="w-[50%]  bg-lightOrange  hover:w-[90%] ease-out  duration-300 h-[530px] rounded-3xl partner relative xs:h-[330px]  2xs:w-full 2xs:hover:w-full overflow-hidden"   onMouseMove={(e) => handleMouseMove(e, 'Choose your Guide')}
         onMouseLeave={handleMouseLeave}>
 <img src={'/assets/images/partner.webp'} alt="" className="w-full h-full object-cover img rounded-3xl"/>

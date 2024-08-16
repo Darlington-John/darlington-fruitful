@@ -36,7 +36,7 @@ const Login = () => {
     <div className='flex  w-full h-screen items-center  bg-gradient-to-b md:bg-gradient-to-r  from-lightGreen  to-lightOrange pl-4 gap-4  md:flex-col md:p-0 relative'>
       
       <Link href="/">
-        <img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[80px] xs:w-20  absolute top-4 left-4"/>
+        <img src={'/assets/icons/logoBlack.svg'} alt="" className="w-[80px] xs:w-20  absolute top-4 left-4 4xl:w-[110px]"/>
         </Link>
       <div className='w-[40%] h-full  flex  items-center  justify-center   md:w-full md:pt-5 xs:px-4'>
         <div className='flex items-center justify-center flex-col gap-5  bg-white  py-10 px-10 rounded-2xl  w-[500px] lg:py-4 lg:px-4 xs:gap-3  xs:w-full'>

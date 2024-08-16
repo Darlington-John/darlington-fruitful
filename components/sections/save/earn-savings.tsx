@@ -36,7 +36,7 @@ const EarnSavings = () => {
       };
     
     return ( 
-        <section className="h-screen w-full  flex  items-center justify-between px-[66px]  gap-20    lg:pt-40  l  lg:gap-4  lg:h-full  md:pt-28 md:pt-20 xs:pt-16  lg:px-8   xs:px-4  md:flex-col"  onMouseMove={handleMouseMove}>
+        <section className="h-screen w-full  flex  items-center justify-between px-[66px]  gap-20    lg:pt-40  l  lg:gap-4  lg:h-full  md:pt-28 md:pt-20 xs:pt-16  lg:px-8   xs:px-4  md:flex-col  4xl:px-[200px]"  onMouseMove={handleMouseMove}>
         <div className="flex  flex-col gap-8  flex-1 items-start   lg:flex-auto lg:gap-4 md:gap-2  " >
             <h1 className="text-[90px] font-semibold leading-[77px]  lg:text-[40px]  lg:leading-none md:text-4xl  xs:text-2xl  w-[500px]    lg:w-full   ">
            Earn 5.00%
@@ -51,10 +51,10 @@ Earn more than 10x the national average on your<br/> savings.* No account fees. 
         No nonsense.
         </h1>
             </div>
-            <Button action="Get started" classic   link="/get-started" big/>
+            <Button action="Get started" classic   link="/get-started?step=1" big/>
         
         </div>
-        <div className="flex-1    rounded-2xl   h-[608px]  md:h-[400px]  relative self-end lg:flex-none  relative  shrink-0   md:self-center ">
+        <div className="flex-1    rounded-2xl   h-[608px]  md:h-[400px]  relative self-center lg:flex-none  relative  shrink-0   md:self-center   ">
      <img src={imageSrc}
         alt="Follow"
         ref={imageRef}

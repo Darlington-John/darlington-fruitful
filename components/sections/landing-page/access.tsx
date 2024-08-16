@@ -18,7 +18,7 @@ const Access = () => {
             info: 'Tailored investment portfolios with expert support at every step and no management fees'
         },
     ]
-    return ( <section className="flex flex col items-center justify-center  py-10 px-4">
+    return ( <section className="flex flex col items-center justify-center  py-10 px-4 4xl:py-16">
 <div className="flex flex-col items-center justify-center gap-6">
 <h1 className="text-[21px]  font-semibold  text-center">
 All plans provide access to
@@ -27,7 +27,7 @@ All plans provide access to
     {information.map((data, index)=> (
     <div className="flex gap-4 items-start text-center w-[330px]  2xs:w-full xs:gap-2" key={index}>
     <img src={'/assets/icons/mark.svg'} alt="" className="w-5 xs:w-4"/>
-    <h1 className="text-base  font-semibold text-start leading-[20px] 2xs:text-sm">
+    <h1 className="text-base  font-semibold text-start leading-[20px] 2xs:text-sm  4xl:font-normal  4xl:leading-[22px]">
  {data.info}
     </h1>
         </div>
