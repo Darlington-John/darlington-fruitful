@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "sections", "sections/landing-page"  ],
+, "sections", "sections/landing-page", "pages/get-started"  ],
   "exclude": [
     "node_modules"
   ]

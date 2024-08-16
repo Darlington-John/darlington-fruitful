@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtnihg7qfp10f5do470",
+  "parentID": "mig_cqtni6kmsa3eg19j33ng",
+  "checksum": "1:a49ff2b21387b6777028237398afc458cde0a6c5070262fc4c1314e98da3b3cc",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "retire-earlier",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

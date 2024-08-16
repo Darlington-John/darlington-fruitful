@@ -100,7 +100,7 @@ const Home = () => {
   <h1 >is a real Fruitful Member</h1>
   {/* tastes like she might be the one*/}
   </div>
-  <Button action="Get started" white  link="/get-started"/>
+  <Button action="Get started" white  link="/get-started?step=1"/>
   </div>
           </div>
            <div className="flex w-full  py-4   px-8 bg-lightGreen   text-green  absolute  z-20 bottom-0  flex-col items-center text-center leading-none gap-0 md:relative  md:py-2 md:px-2 ">

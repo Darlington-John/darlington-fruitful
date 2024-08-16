@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtju98retmc1qti6g90",
+  "parentID": "mig_cqtjtt8retmc1qti6g80",
+  "checksum": "1:52717f4962a778ef8a61f45859608bc2d7c5bcbc0de01c84b2f96d1d6c2ef1d2",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "future-plan",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

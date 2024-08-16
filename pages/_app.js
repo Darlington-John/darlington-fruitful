@@ -1,9 +1,9 @@
 
-import { useMemo } from 'react';
 import { FruitfulProvider } from '../components/context';
 import Layout from '../components/layout';
 import '../styles/global.css';
 import localFont from 'next/font/local'
+import { createContext, useContext } from 'react';
 const myFont = localFont({ src: [
   {
   path: './../public/assets/fonts/neue-book.otf',
@@ -21,17 +21,21 @@ const myFont = localFont({ src: [
 ],
 
 })
-
+export const UserContext = createContext(null);
 export default function App({ Component, pageProps }) {
-
+// Get userData from the page's props
+const { userData } = pageProps;
     return (
       <FruitfulProvider>
+        <UserContext.Provider value={userData}>
+
     <main className={`${myFont.className}`}>
 <Layout>
     <Component {...pageProps}   />
     </Layout>
 
     </main>
+    </UserContext.Provider>
     </FruitfulProvider>
     );
   }

@@ -53,7 +53,7 @@ const EarnMore = ({glowRef1, glow}) => {
     </li>
 ))}
         </ul>
-    <Button link="/get-started" orange  action="Get started"/>
+    <Button link="/get-started?step=1" orange  action="Get started"/>
     </div>
 <div className="bg-[#f7fbff]  rounded-2xl  p-8 flex flex-col gap-6  w-[550px]  lg:self-end  sm:w-full  2xs:p-2">
 

@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtjtt8retmc1qti6g80",
+  "parentID": "mig_cqt291e0suhdj1lc0al0",
+  "checksum": "1:15b44d898ded8e65b17945d5ac1b2d8a7a52d9e6aa4bf465657a627aad0a0643",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "financial-advice",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

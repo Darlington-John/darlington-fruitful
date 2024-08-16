@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtnhtkmsa3eg19j33mg",
+  "parentID": "mig_cqtjvcoretmc1qti6gb0",
+  "checksum": "1:ad9dc97a4682e332cee791ce2e82ddf6266bdbfcc1a8ae395426030c49580124",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "save-more",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

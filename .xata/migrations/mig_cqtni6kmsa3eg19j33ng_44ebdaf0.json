@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtni6kmsa3eg19j33ng",
+  "parentID": "mig_cqtnhtkmsa3eg19j33mg",
+  "checksum": "1:44ebdaf0774993d2d0a31034cee650e0ecd69985dbf450547c868689cc5e2688",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "invest-smarter",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

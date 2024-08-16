@@ -8,22 +8,21 @@ import { useRef } from 'react';
 import Footer, { PostFooter } from './footer';
 import Loader from './loader';
 import { useRouter } from 'next/router';
-import AuthNavbar from './auth-navbar';
 
 export default function Layout({ children }) {
     const router = useRouter();
     const { pathname } = router;
 
     return (<div className=' relative'>
-        {pathname !== '/get-started' && (<>
+        {!(pathname.startsWith('/get-started') || pathname.startsWith('/profile') || pathname.startsWith('/login')) && (<>
             <Navbar/>
         <Overlay/>
         <LinkHoverListener/>
         <Hover/>
         </>)}
-        {pathname === '/get-started' && (<AuthNavbar/>)}
+       
         {children}
-        {pathname !== '/get-started' && (<>
+        {!(pathname.startsWith('/get-started') || pathname.startsWith('/profile') || pathname.startsWith('/login'))  && (<>
             <Footer/>
             <PostFooter/>
         </>)}

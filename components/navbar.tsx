@@ -4,8 +4,10 @@ import Link from "next/link";
 import Button from "./buttons";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
-
+import { UserContext } from '../pages/_app';
 const Navbar = () => {
+  const userData = useContext(UserContext);
+  
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -89,12 +91,15 @@ const Navbar = () => {
     <MembersBenefits  style={elementStyle} />
     </div>
 <div className="flex gap-4  items-center">
-    <div style={elementStyle} className="md:hidden">
+  {userData ? null: (   <div style={elementStyle} className="md:hidden">
 <Button link="/login" login action="Login" />
-</div>
-<div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
-<Button link="/get-started" classic  action="Get started"/>
-</div>
+</div>)}
+{userData ? <div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
+<Button link="/profile" classic  action={`${userData.surname[0]}${userData.name[0]} `}/>
+</div> : (   <div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
+<Button link="/get-started?step=1" classic  action='Get started'/>
+</div>)}
+
 <button className="  h-10 w-10  bg-[#9a9a9a66]  rounded-full  md:flex items-center justify-center hidden xs:h-8 xs:w-8 backdrop-blur-lg" onClick={handleToggleOverlay}>
 <img src={icon} alt="" className="w-4 xs:w-[12px]" />
 </button>

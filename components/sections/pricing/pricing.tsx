@@ -9,7 +9,7 @@ and transparent
 <h1 className="text-lg   font-semibold  text-center    xs:text-sm  ">
 ...and less than half² the cost of traditional advisory firms.
 </h1>
-<Button link="/get-started" action="Get started" big classic/>
+<Button link="/get-started?step=1" action="Get started" big classic/>
     </section>  );
 }
  

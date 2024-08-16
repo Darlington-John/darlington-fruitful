@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtjv60retmc1qti6ga0",
+  "parentID": "mig_cqtjuru5rc3s7hehbi00",
+  "checksum": "1:4d3e5bf646dd77ea8d666440bbce4157fbaabba2743c238cd3f56e7cb6918c47",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "get-organized",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

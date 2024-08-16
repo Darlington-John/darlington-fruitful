@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtjuru5rc3s7hehbi00",
+  "parentID": "mig_cqtjuf65rc3s7hehbhv0",
+  "checksum": "1:477bc320db59716abe9dcc54fb10414a3c84e7975121ec982303cc53f84b81f3",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "money-habits",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

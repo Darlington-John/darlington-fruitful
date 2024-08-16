@@ -7,7 +7,27 @@ import type {
 } from "@xata.io/client";
 
 const tables = [
-  { name: "users", columns: [{ name: "email", type: "text" }] },
+  {
+    name: "users",
+    columns: [
+      { name: "email", type: "text" },
+      { name: "financial-advice", type: "bool", defaultValue: "false" },
+      { name: "future-plan", type: "bool", defaultValue: "false" },
+      { name: "goal-progress", type: "bool", defaultValue: "false" },
+      { name: "money-habits", type: "bool", defaultValue: "false" },
+      { name: "get-organized", type: "bool", defaultValue: "false" },
+      { name: "reason", type: "text" },
+      { name: "save-more", type: "bool", defaultValue: "false" },
+      { name: "invest-smarter", type: "bool", defaultValue: "false" },
+      { name: "retire-earlier", type: "bool", defaultValue: "false" },
+      { name: "deal-debt", type: "bool", defaultValue: "false" },
+      { name: "goal", type: "text" },
+      { name: "guide", type: "text" },
+      { name: "password", type: "text" },
+      { name: "name", type: "text" },
+      { name: "surname", type: "text" },
+    ],
+  },
 ] as const;
 
 export type SchemaTables = typeof tables;

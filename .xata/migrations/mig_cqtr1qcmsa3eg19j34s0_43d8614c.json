@@ -1,0 +1,16 @@
+{
+  "id": "mig_cqtr1qcmsa3eg19j34s0",
+  "parentID": "mig_cqtnjl87qfp10f5do490",
+  "checksum": "1:43d8614ce403d8e27b8da313b4bb9080aa2adca0aa75dc82d696ab0c14558c7c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "guide",
+          "type": "text"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

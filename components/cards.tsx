@@ -1,7 +1,10 @@
 import { useInView } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Button from './buttons';
+import { FruitfulContext } from './context';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 
 const Card = (props: any) => {
@@ -68,12 +71,18 @@ const Card = (props: any) => {
       props.onScroll(cardRef, props.id);
     }
   }, [props.onScroll, props.id]);
+  const{selectedGuide, setSelectedGuide} = useContext(FruitfulContext);
+  const handleButtonClick = () => {
+    setSelectedGuide(props.name);  // Set the context value when button is clicked
+  };
 
+  const router = useRouter();
+  const { pathname } = router;
   return (
     <>
       {props.guide && (
-        <div
-          className={`bg-lightOrange rounded-xl h-[300px]  w-[230px]  overflow-hidden hover:scale-[1.15] ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow`}
+          <div
+          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative   ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
           style={{
             transform: `rotate(${props.rotate}deg) `,
             transition: 'transform  0.3s cubic-bezier(0.17, 0.55, 0.55, 1), width  1s cubic-bezier(0.17, 0.55, 0.55, 1)',
@@ -90,14 +99,25 @@ const Card = (props: any) => {
           }}
           onClick={toggleAboutPopup}
         >
+          {selectedGuide=== props.name && (
+            <div className='bg-lightGreen p-2 rounded-full border border-green absolute -top-2 -left-2'>
+<img src={'/assets/images/check.svg'} className='w-4  img'/>
+</div>
+          )}
+          
           <img src={props.img} alt="" className="h-full w-full object-cover object-center" />
-          <video muted autoPlay loop src={props.video} className="w-full h-full object-cover" />
+          <video muted autoPlay loop src={props.video} className={`w-full h-full object-cover  rounded-xl  ${selectedGuide === props.name && ' border-2  border-green   border-inset  z-30'}`} />
 
         </div>
 
       )}
-      {props.sliderGuide && (    <div className={`keen-slider__slide number-slide  bg-lightOrange rounded-xl h-[300px]  w-[230px]  overflow-hidden ease-out duration-300    relative `}  onClick={toggleAboutPopup}>
-                        {props.slide ===props.slideIndex ? (          <video muted autoPlay loop src={props?.video} className="w-full h-full object-cover" />) : (<img src={props?.img} alt="" className="h-full w-full object-cover object-center" />) }
+      {props.sliderGuide && (    <div className={`keen-slider__slide number-slide  bg-lightOrange rounded-xl h-[300px]  w-[230px]   ease-out duration-300    relative  ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}  onClick={toggleAboutPopup}  style={{overflow: 'scroll'}}>
+        {selectedGuide=== props.name && (
+            <div className='bg-lightGreen p-2 rounded-full border border-green absolute top-2  left-2'>
+<img src={'/assets/images/check.svg'} className='w-4'/>
+</div>
+          )}
+                        {props.slide ===props.slideIndex ? (          <video muted autoPlay loop src={props?.video} className={`w-full h-full object-cover  ${selectedGuide === props.name && ' border-2  border-green   border-inset  z-30'}`} />) : (<img src={props?.img} alt="" className="h-full w-full object-cover object-center" />) }
                         <button className=" p-1 text-sm absolute bottom-2  bg-[#9a9a9a66]  backdrop-blur-sm text-white rounded-lg text-nowrap right-2   2xs:text-xs">
 Watch {props?.name}
                             </button>
@@ -127,7 +147,7 @@ Watch {props?.name}
 
       )}
             {about && (
-  <div className={`fixed bottom-[0px]  h-full w-full  z-30 left-0 flex  justify-center  items-center        backdrop-brightness-50  px-8 xs:justify-end  xs:items-end  xs:px-0 `}>
+  <div className={`fixed bottom-[0px]  h-full w-full  z-50 left-0 flex  justify-center  items-center        backdrop-brightness-50  px-8 xs:justify-end  xs:items-end  xs:px-0 `}>
     <div className={`w-[900px]  rounded-[20px] pop  duration-300 ease-in-out bg-white flex flex-col   overflow-hidden  xs:overflow-auto  xs:rounded-t-2xl   xs:rounded-b-none ${isAboutVisible ? '' : 'pop-hidden'}`} ref={aboutRef} >
 <div className={`flex   gap-3  w-full xs:flex-col xs:overflow-scroll    xs:py-3   ${props.hfull && 'xs:h-[90vh]'}`}>
   <div className={`  ${props.half && 'w-1/2'}   ${props.full && 'w-full'}   relative xs:w-full   `}>
@@ -182,13 +202,28 @@ Watch {props?.name}
   </div>
   </div>
   </div>
+  {pathname !=='/profile' &&  (
   <div className='text-center '>
-  <button className='flex items-center  h-[40px] md:h-[30px] py-[25px] px-[30px] md:py-3 md:px-4  xs:text-xs text-base md:text-sm  xs:h-[30px] text-center  bg-[#054f31]  w-full text-center text-white rounded-full xs:h-[40px] '>
+    {pathname.startsWith( '/get-started') ? (<button className='flex items-center  h-[40px] md:h-[30px] py-[25px] px-[30px] md:py-3 md:px-4  xs:text-xs text-base md:text-sm  xs:h-[30px] text-center  bg-[#054f31]  w-full text-center text-white rounded-full xs:h-[40px] ' onClick={handleButtonClick}>
+    
     <h1 className='text-center mx-auto'>
-  Choose your Guide
+    {selectedGuide === props.name? 'Good choice'  :(<> Choose  {props.name} </>)}
+ 
+  </h1>
+  </button>): (
+    <Link href="/get-started?step=1">
+    <button className='flex items-center  h-[40px] md:h-[30px] py-[25px] px-[30px] md:py-3 md:px-4  xs:text-xs text-base md:text-sm  xs:h-[30px] text-center  bg-[#054f31]  w-full text-center text-white rounded-full xs:h-[40px] '>
+    
+    <h1 className='text-center mx-auto'>
+Choose your Guide
   </h1>
   </button>
+  </Link>
+  )}
+  
+  {/* This should be stored in context */}
   </div>
+  )}
   </div>
 )}
 

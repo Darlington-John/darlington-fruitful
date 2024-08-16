@@ -83,7 +83,7 @@ minimize taxes and expenses.`,
           </div>
         ))}
 <div className="md:pt-4 xs:pt-2">
-<Button action="Get started" classic   link="/get-started" big/>
+<Button action="Get started" classic   link="/get-started?step=1" big/>
 </div>
 </div>
 </div>

@@ -415,7 +415,7 @@ height: auto;
   display: none;
 }
 
-.guide:hover img {
+.guide:hover img:not(.img) {
 display: none;
 }
 .guide:hover video {

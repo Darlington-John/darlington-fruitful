@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtjuf65rc3s7hehbhv0",
+  "parentID": "mig_cqtju98retmc1qti6g90",
+  "checksum": "1:a090850c014328c4ce21bb8987f64a0ca3e0478d941070abf792592e836a2d53",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "goal-progress",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import { createContext, useEffect, useRef, useState, ReactNode } from 'react';
 interface FruitfulContextType {
   isBenefit: boolean;
   setIsBenefit: React.Dispatch<React.SetStateAction<boolean>>;
+  selectedGuide:string;
+  setSelectedGuide:React.Dispatch<React.SetStateAction<string>>;
   isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
   benefitRef: React.RefObject<HTMLDivElement>;
@@ -72,11 +74,11 @@ const FruitfulProvider = ({ children }: { children: ReactNode }) => {
     }, []);
 
     const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-    
+    const [selectedGuide, setSelectedGuide] = useState('');
 
     return (
       <FruitfulContext.Provider value={{ 
-        isBenefit, setIsBenefit, isVisible, setIsVisible,  benefitRef, toggleBenefitPopup, handleClickOutside,  handleMouseEnter,  hoverItems, isOverlayOpen, setIsOverlayOpen
+        isBenefit, setIsBenefit, isVisible, setIsVisible,  benefitRef, toggleBenefitPopup, handleClickOutside,  handleMouseEnter,  hoverItems, isOverlayOpen, setIsOverlayOpen,selectedGuide, setSelectedGuide
   }}>
         {children}
       </FruitfulContext.Provider>

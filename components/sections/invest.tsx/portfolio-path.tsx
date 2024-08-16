@@ -1,38 +1,7 @@
-import Card from "../../cards";
+
 
 const PortfolioPath = () => {
-    const pov =[
-        {
-            img:'/assets/images/asorbBlue.png',
-            header: 'Keep it simple',
-            content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
-        },
-        {
-            img:'/assets/images/plantBlue.png',
-            header: 'Be goal-oriented',
-            content: `Every goal needs its own plan. Tell us what you're saving for, your timeline, your needs, and contributions. We'll create a tailored approach with just the right amount of risk to hit your targets.`
-        },
-        {
-            img:'/assets/images/MeasureBlue.png',
-            header: 'Keep it simple',
-            content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
-        },
-        {
-            img:'/assets/images/forest.png',
-            header: 'Keep it simple',
-            content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
-        },
-        {
-            img:'/assets/images/waterMech.png',
-            header: 'Keep it simple',
-            content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
-        },
-        {
-            img:'/assets/images/love.png',
-            header: 'Keep it simple',
-            content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
-        },
-    ]
+ 
     const folio = [
         {
             img: '/assets/images/magic.svg',

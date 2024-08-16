@@ -1,0 +1,17 @@
+{
+  "id": "mig_cqtnio87qfp10f5do480",
+  "parentID": "mig_cqtnihg7qfp10f5do470",
+  "checksum": "1:0d13b59ee143eb5da7c259503207fba5dcb0a8416c895779b477b7921e96629b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "deal-debt",
+          "type": "bool",
+          "defaultValue": "false"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

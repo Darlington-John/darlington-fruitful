@@ -26,7 +26,7 @@ Work with an expert who understands you and your money.
 Eliminate your stress. Get going and get growing in no time.
 </h1>
     </div>
-    <Button action="Get started" classic   link="/get-started" big/>
+    <Button action="Get started" classic   link="/get-started?step=1" big/>
 
 </div>
 <div className="flex-1  bg-lightOrange  rounded-2xl  overflow-hidden h-[608px]  md:h-auto  relative self-end lg:flex-auto  ">

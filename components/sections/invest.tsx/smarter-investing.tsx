@@ -50,7 +50,7 @@ set up for you
         No management fees. No minimums.
         </h1>
             </div>
-            <Button action="Get started" classic   link="/get-started" big/>
+            <Button action="Get started" classic   link="/get-started?step=1" big/>
         
         </div>
         <div className="flex-1    rounded-2xl   h-[608px]  md:h-[400px]  relative self-end lg:flex-none  relative  shrink-0   md:self-center   2xs:w-full">
