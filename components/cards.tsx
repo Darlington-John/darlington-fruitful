@@ -82,7 +82,7 @@ const Card = (props: any) => {
     <>
       {props.guide && (
           <div
-          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative   ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
+          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative overflow-hidden    ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
           style={{
             transform: `rotate(${props.rotate}deg) `,
             transition: 'transform  0.3s cubic-bezier(0.17, 0.55, 0.55, 1), width  1s cubic-bezier(0.17, 0.55, 0.55, 1)',
@@ -122,30 +122,7 @@ const Card = (props: any) => {
 Watch {props?.name}
                             </button>
                     </div>)}
-          {props.members && (
-        <div
-          className={`bg-lightOrange rounded-xl h-[300px]  w-[230px]  overflow-hidden hover:scale-[1.15] ease-out duration-300  drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow  members`}
-          style={{
-            transform: `rotate(${props.rotate}deg) `,
-            transition: 'transform  0.3s cubic-bezier(0.17, 0.55, 0.55, 1), width  1s cubic-bezier(0.17, 0.55, 0.55, 1)',
-            width: width,
-          }}
-          ref={ref} 
-        onMouseMove={(e) => handleMouseMove(e, `${props.more} ${props.name}`)}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLDivElement).style.transform = `rotate(${props.rotateH}deg) scale(1.15)`;
-          }}
-          onMouseLeave={(e) => {
-            handleMouseLeave();
-            (e.currentTarget as HTMLDivElement).style.transform = `rotate(${props.rotate}deg)`;
-          }}
-          onClick={toggleAboutPopup}
-        >
-          <img src={props.img} alt="" className="h-full w-full object-cover object-center  " />
-
-        </div>
-
-      )}
+      
             {about && (
   <div className={`fixed bottom-[0px]  h-full w-full  z-50 left-0 flex  justify-center  items-center        backdrop-brightness-50  px-8 xs:justify-end  xs:items-end  xs:px-0 `}>
     <div className={`w-[900px]  rounded-[20px] pop  duration-300 ease-in-out bg-white flex flex-col   overflow-hidden  xs:overflow-auto  xs:rounded-t-2xl   xs:rounded-b-none ${isAboutVisible ? '' : 'pop-hidden'}`} ref={aboutRef} >
@@ -263,7 +240,7 @@ Choose your Guide
 <img src={props.main} className='w-auto h-auto rounded-[20px]  bounce xs:hidden' alt='' style={{backgroundColor: `${props.bg}`, width: `${props.width}`}} />
 <img src={props.float} className='absolute bounce xs:static ' style={{top: `${props.top}`, left: `${props.left}`, width: `${props.width1}`}} alt=''/>
 <img src={props.float2} className='absolute bounce xs:static xs:self-end ' style={{top: `${props.top2}`, left: `${props.left2}`, width: `${props.width2}`}} alt=''/>
-<img src={props.float3} className='absolute bounce xs:hidden  md:self-end  ' style={{top: `${props.top3}`, left: `${props.left3}`, width: `${props.width3}`}} alt=''/>
+<img src={props.float3} className='absolute bounce md:hidden  md:self-end  ' style={{top: `${props.top3}`, left: `${props.left3}`, width: `${props.width3}`}} alt=''/>
 </div>
   </div>
 )}

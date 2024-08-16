@@ -49,7 +49,7 @@ const featuring = [
     }
 ]
 
-    return ( <div className="bg-[#E0F0FF]   px-[66px]  py-20    relative  outline-none     flex  flex-col gap-10  md:px-0   xs:py-4  " >
+    return ( <div className="bg-[#E0F0FF]   px-[66px]  py-20    relative  outline-none     flex  flex-col gap-10  md:px-0   xs:py-4 overflow-hidden   " >
 
 {featuring.map((data, index) =>(
     <Card benefit data={data}  {...data} key={index} />

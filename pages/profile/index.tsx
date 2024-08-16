@@ -233,8 +233,8 @@ useEffect(() => {
   };
 }, []);
   return (
-    <div className="h-screen w-full flex items-center justify-center  bg-[#A4D4EA]    relative  xl:bg-gradient-to-l  from-lightOrange to-lightGreen  lg:h-auto lg:justify-between lg:px-4  md:bg-gradient-to-b md:from-lightGreen md:to-lightOrange"  >
-      <Link href='/' className="absolute top-6 left-10 xs:top-4 xs:left-4">
+    <div className="h-screen w-full flex items-center justify-center  bg-[#A4D4EA]    relative  xl:bg-gradient-to-l  from-lightOrange to-lightGreen   lg:justify-between lg:px-4  md:bg-gradient-to-b md:from-lightGreen md:to-lightOrange overflow-auto  xs:h-auto"  >
+      <Link href='/' className="absolute top-6 left-10 xs:top-4 xs:left-4  z-40">
       <img src="/assets/icons/logoBlack.svg" alt="Second Logo"  className="w-[80px] xs:w-20  "/>
       </Link>
         <div className="bg-white   flex  w-[60%]  h-full  xl:h-auto xl:py-20  rounded-l-[100px] items-center justify-center text-green flex-col gap-3  xl:w-auto  px-20  xl:rounded-2xl lg:px-10 lg:bg-[#ffffff00] lg:flex-row lg:px-0  lg:items-start  lg:w-full  md:flex-col md:items-center xs:py-10">
@@ -258,8 +258,8 @@ useEffect(() => {
             </div>
             </div>
             {edit && (
-       <div className={`fixed bottom-[0px]  h-full w-full  z-50 left-0 flex  justify-center  items-center        backdrop-brightness-50  px-8 xs:justify-end  xs:items-end  xs:px-0 `}>
-       <div className={`w-[400px]  rounded-2xl   bg-gradient-to-b  from-lightGreen  to-lightOrange pop  duration-300 ease-in-out  ${isEditVisible ? '' : 'pop-hidden'}`} ref={editRef} >
+       <div className={`fixed bottom-[0px]  h-full w-full  z-50 left-0 flex  justify-center  items-center        backdrop-brightness-50  px-8   xs:items-end  xs:px-0 `}>
+       <div className={`w-[400px]  rounded-2xl   bg-gradient-to-b  from-lightGreen  to-lightOrange pop  duration-300 ease-in-out xs:w-full   ${isEditVisible ? '' : 'pop-hidden'}`} ref={editRef} >
        <form onSubmit={handleUpdate} className="flex flex-col p-4 gap-3">
         <div className="flex flex-col ">
         <label htmlFor="name" className="text-sm font-semibold">Name:</label>
@@ -378,7 +378,7 @@ Deal with debt
 </div>
 </div>
 </div>
-<button className="py-3 px-3 text-base text-green border rounded-2xl self-end  w-[100px]  hover:bg-green hover:text-lightGreen  duration-300 ease rounded-full " onClick={handleLogout} >
+<button className="py-3 px-3 text-base text-green border rounded-2xl self-end  w-[100px]  hover:bg-green hover:text-lightGreen  duration-300 ease rounded-full  xl:hidden md:block md:self-center" onClick={handleLogout} >
 Log out
 </button>
       </div>
