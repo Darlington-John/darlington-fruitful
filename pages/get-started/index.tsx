@@ -210,7 +210,7 @@ thirdStyle: '💫 Enlightening',
         }
     ]
     return ( <div className="w-full ">
-    <div className="flex w-full items-center py-6       lg:py-4  sticky top-0   xs:py-3 xs:px-4  gap-10  relative   bg-white   px-10  overflow-hidden">
+    <div className="flex w-full items-center py-6       lg:py-4  sticky top-0   xs:py-3 xs:px-4  gap-10  relative   bg-white   px-10  overflow-hidden  z-40">
   
         {step === '2' && <Link href=''>
 <img src={'/assets/icons/arr-left.svg'} alt=""  className="w-6   "/>
