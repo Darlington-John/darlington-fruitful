@@ -108,7 +108,7 @@ const Navbar = () => {
 }
 
  export const MembersBenefits  = (props: any) => {
-    const{isBenefit, setIsBenefit, isVisible, setIsVisible,  benefitRef, toggleBenefitPopup, handleClickOutside} = useContext(FruitfulContext);
+    const{isBenefit,  isVisible,  benefitRef, toggleBenefitPopup} = useContext(FruitfulContext);
     const benefits =[
          {
         id:1,
@@ -144,8 +144,8 @@ const Navbar = () => {
 
 {isBenefit && (
     <div className={`rounded-xl py-2  px-2   backdrop-blur-lg bg-[#9a9a9a66] absolute  popup z-30 flex   ${isVisible ? '' : 'popup-hidden'}`} ref={benefitRef}>
-        {benefits.map((benefit, index)=> (
-            <Link href={benefit.link} className="flex  items-center  justify-center " key={index}>
+        {benefits.map((benefit)=> (
+            <Link href={benefit.link} className="flex  items-center  justify-center " key={benefit.feature}>
     <div className="flex flex-col gap-1  px-4 py-3  text-white w-[190px] hover:bg-[#00000014] rounded-lg leading-none  ease-out duration-300">
 <h1 className="text-base">
 {benefit.feature}

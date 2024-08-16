@@ -93,7 +93,7 @@ const handleLoading =()=>{
   
     // Progress bar calculation
     const progressPercentage = parseInt(stepString) * 20;
-    const{selectedGuide, setSelectedGuide} = useContext(FruitfulContext);
+    const{selectedGuide} = useContext(FruitfulContext);
     const [message, setMessage] = useState('');
     useEffect(() => {
         if (step === '5') {

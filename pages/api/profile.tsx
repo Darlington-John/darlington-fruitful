@@ -1,8 +1,10 @@
 // pages/api/profile.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
+import jwt, {JwtPayload} from 'jsonwebtoken';
 import { getXataClient } from '../../utils/xata';
-
+interface DecodedToken extends JwtPayload {
+  email: string;
+}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const token = req.headers.authorization?.split(' ')[1];
@@ -11,8 +13,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as DecodedToken;
+
+    // Extract email from decoded payload
     const { email } = decoded;
+
 
     const xata = getXataClient();
     const user = await xata.db.users.filter({ email }).getFirst();
