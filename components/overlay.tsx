@@ -17,12 +17,17 @@ const Overlay = () => {
  </Link>
  </div>
  <div className={`flex flex-col gap-4 fade  `}>
-<button className='rounded-[20px] bg-black text-white text-[22px] font-semibold py-4 text-center xs:text-base xs:py-2'>
+  <Link href='/login' className='w-full'>
+
+<button className='rounded-[20px] bg-black text-white text-[22px] font-semibold py-4 text-center xs:text-base xs:py-2 w-full'>
 Login
 </button>
-<button className='rounded-[20px]   text-black border border-black  text-[22px] font-semibold py-4 text-center  xs:text-base xs:py-2'>
+</Link>
+<Link href="/get-started?step=1"  className='w-full'>
+<button className='rounded-[20px]   text-black border border-black  text-[22px] font-semibold py-4 text-center  xs:text-base xs:py-2  w-full'>
 Sign up
 </button>
+</Link>
  </div>
 
  </div>
