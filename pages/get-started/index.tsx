@@ -114,6 +114,10 @@ const handleLoading =()=>{
           };
         }
       }, [step, router]);
+      const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+      const handleTogglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
+      };
     const guides =[
         {
             id: 1,
@@ -244,12 +248,22 @@ Get going, get growing, get on track in 30 days.
                   value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                      <input type="text" placeholder="Password" className="text-lg font-semibold   rounded-lg  p-2 outline-none  ring-1 ring-inset focus-within:ring-1
+                     <div className=' flex gap-2 border border-grey rounded-md pr-2 w-full ring-1 ring-inset focus-within:ring-1 py-1  pr-1 
             
-            ring-grey  focus-within:ring-green  w-full  md:text-sm"
+            ring-grey  focus-within:ring-green   bg-white'>
+                     <input type={isPasswordVisible ? 'text' : 'password'}placeholder="Password" className="text-lg font-semibold   rounded-lg  p-2 outline-none  w-full  md:text-sm"
             value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+      <button   onClick={handleTogglePasswordVisibility}  type="button">
+      <img
+       alt=""  src={isPasswordVisible ?'/assets/icons/eye-close.svg' : '/assets/icons/eye-open.svg'}
+
+className="w-5  h-5"
+   />
+      </button>
+      </div>
+                    
             </div>
             <div className="w-full flex gap-2 sm:flex-col">
 
