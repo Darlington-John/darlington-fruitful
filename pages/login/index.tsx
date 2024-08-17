@@ -8,11 +8,15 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
-
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const handleTogglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
   const handleLogin = async (event) => {
     // Prevent the default form submission behavior
     event.preventDefault();
-
+    setErrorMessage('');
     const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
@@ -27,8 +31,10 @@ const Login = () => {
       // Store the JWT token
       localStorage.setItem('token', data.token);
       router.push('/');
+      setErrorMessage('');
     } else {
       console.error(data.error);
+      setErrorMessage(data.error);
     }
   };
 
@@ -52,20 +58,37 @@ const Login = () => {
         type="email"
         placeholder="johndoe@gmail.com"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e) => {
+          setEmail(e.target.value);
+          setErrorMessage(''); // Clear the error message while typing
+        }}
         required
            className="text-sm font-semibold text-green outline-none px-2 py-3 rounded-md rounded-md border border-grey w-full"
       />
           </div>
           <div className="flex flex-col  w-full text-green">
         <label htmlFor="password" className="text-sm font-semibold">Password:</label>
+        <div className=' flex gap-2 border border-grey rounded-md pr-2'>
         <input
         placeholder="*****"
         value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e) => {
+          setPassword(e.target.value);
+          setErrorMessage(''); // Clear the error message while typing
+        }}
         required
-          className="text-sm font-semibold text-green outline-none px-2 py-3 rounded-md rounded-md border border-grey w-full"
+          className="text-sm font-semibold text-green outline-none px-2 py-3 rounded-md rounded-md  w-full"
+          type={isPasswordVisible ? 'text' : 'password'}
       />
+      <button   onClick={handleTogglePasswordVisibility}  type="button">
+      <img
+       alt=""  src={isPasswordVisible ?'/assets/icons/eye-close.svg' : '/assets/icons/eye-open.svg'}
+
+className="w-5  h-5"
+   />
+      </button>
+      </div>
+      {errorMessage && <p className='text-sm  text-[#de5b5b]'>{errorMessage}</p>}
           </div>
     
       <button type="submit" className='bg-green rounded-full py-3  w-[80%] text-lightGreen  text-sm  self-center  hover:bg-lightGreen hover:text-green  transition duration-300  ease'>Login</button>

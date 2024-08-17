@@ -95,7 +95,7 @@ const Navbar = () => {
 <Button link="/login" login action="Login" />
 </div>)}
 {userData ? <div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
-<Button link="/profile" classic  action={`${userData.surname[0]}${userData.name[0]} `}/>
+<Button link="/profile" classic  action={`${userData.name}`}/>
 </div> : (   <div className={`ease-out duration-300 ${isOverlayOpen? 'opacity-0':''}`}>
 <Button link="/get-started?step=1" classic  action='Get started'/>
 </div>)}
