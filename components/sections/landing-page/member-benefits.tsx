@@ -55,8 +55,8 @@ const MembersBenefits = () => {
     const maxAdjustedScroll = maxScroll - colorChangeThreshold;
     const colorValue = Math.max(0, 255 - ((adjustedScroll / maxAdjustedScroll) * 255));
     const color = clampedScroll >= maxScroll ? '#000000' : `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
-    return ( <section className="flex flex-col w-full relative" ref={containerRef}>
-        <div className="relative  w-full h-[240vh]  4xl:h-[150vh]  bg-[#B0DAED]  rounded-t-[40px]  ">
+    return ( <section className="flex flex-col w-full relative overflow-hidden" ref={containerRef}>
+        <div className="relative  w-full h-[240vh]  4xl:h-[150vh]  bg-[#B0DAED]  rounded-t-[40px]    xs:h-[180vh]">
 <img src={'/assets/images/leftTree.png'} className="absolute left-0 bottom-40  h-[1132px]  object-cover  "  alt=''/>
 <img src={'/assets/images/rightTree.png'} className="absolute right-0 bottom-0  h-[1395px] object-cover "  alt=''/>
 <img src={'/assets/images/people.webp'} className="absolute  bottom-0  w-full " alt=''/>
