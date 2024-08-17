@@ -13,7 +13,7 @@ crafts an investing approach
 that's seamlessly supported by
 us, and super simple for you.`,
   header: 'Sync',
-  img: '/assets/images/measure.png',
+  img: '/assets/images/measure.webp',
   rotate: '2'
     },
     {id: 2,
@@ -24,7 +24,7 @@ your goals and risk profile. Then
 we’ll automate investing to build
 long-term wealth with ease.`,
   header: 'Start',
-  img: '/assets/images/together.png',
+  img: '/assets/images/together.webp',
     rotate: '-2'
     },
     {id: 3,
@@ -35,7 +35,7 @@ investing approach does too.
 We’ll also work with you to
 minimize taxes and expenses.`,
   header: 'Scale',
-  img: '/assets/images/seek.png',
+  img: '/assets/images/seek.webp',
      rotate: '5'
     },
   ];

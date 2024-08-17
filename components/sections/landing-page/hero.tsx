@@ -88,7 +88,7 @@ const Home = () => {
           <video  autoPlay  muted  loop src={"/assets/videos/hero.mp4"}  className='    z-10 top-0  absolute w-full xs:invisible'  style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"/>
           <video  autoPlay  muted  loop src={"/assets/videos/mobileVid.mp4"}  className='    z-10 top-0  absolute w-full  hidden  xs:block' style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  preload="auto"/>
           <div className="flex relative items-start z-20 md:py-6">
-<div className="flex flex-col gap-6  items-start w-full px-[66px] md:px-4  text-white md:gap-4 xs:gap-0   4xl:px-[200px]">
+<div className="flex flex-col gap-6  items-start w-full px-[66px] md:px-4  text-white md:gap-4 xs:gap-0   3xl:px-[200px]">
   <div className="text-white  text-[90px] leading-[80px] md:leading-none   md:flex gap-2 items-center md:text-[35px] md:flex-wrap  xs:text-3xl  xs:pb-2">
     <h1 className="font-semibold 2xs:hidden">Finances</h1>
     <h1 className="font-semibold 2xs:hidden">figured out</h1>

@@ -13,6 +13,7 @@ const Login = () => {
   const handleTogglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
+  const [loading, setIsLoading]= useState(false);
   const handleLogin = async (event) => {
     // Prevent the default form submission behavior
     event.preventDefault();
@@ -29,9 +30,11 @@ const Login = () => {
 
     if (response.ok) {
       // Store the JWT token
+      setIsLoading(true);
       localStorage.setItem('token', data.token);
       router.push('/');
       setErrorMessage('');
+
     } else {
       console.error(data.error);
       setErrorMessage(data.error);
@@ -91,7 +94,7 @@ className="w-5  h-5"
       {errorMessage && <p className='text-sm  text-[#de5b5b]'>{errorMessage}</p>}
           </div>
     
-      <button type="submit" className='bg-green rounded-full py-3  w-[80%] text-lightGreen  text-sm  self-center  hover:bg-lightGreen hover:text-green  transition duration-300  ease'>Login</button>
+      <button type="submit" className='bg-green rounded-full py-3  w-[80%] text-lightGreen  text-sm  self-center  hover:bg-lightGreen hover:text-green  transition duration-300  ease'>{loading ? (<img src={'/assets/images/spinner.gif'}alt="" className="w-8 mx-auto"/>): 'Login'}</button>
 {/* <Link href='/get-started?step=1' className='text-sm text-green'>Don't have an account?  sign up</Link> */}
     </form>
     </div>

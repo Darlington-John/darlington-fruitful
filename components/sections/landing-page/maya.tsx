@@ -15,7 +15,7 @@ const MayaSpeech = () => {
 stressed about my finances, I feel 
 <br className="md:hidden"/>a lot more in control of my life!”</h1>
 <div className="flex items-center flex-col" style={float}>
-<img src={'/assets/images/smileMaya.jpg'} alt="" className="w-28 rounded-full  2xs:w-16"/>
+<img src={'/assets/images/smileMaya.webp'} alt="" className="w-28 rounded-full  2xs:w-16"/>
 <div className="flex flex-col text-center items-center text-lg  2xs:text-base">
 <h1 className="font-bold"   style={float}>
 Maya

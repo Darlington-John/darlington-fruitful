@@ -33,7 +33,7 @@ Eliminate your stress. Get going and get growing in no time.
 <button onClick={toggleMute} className="p-2 bg-[#f9fafb59]  text-lightOrange  rounded-full  absolute top-4 left-4 h-10 w-10 flex items-center justify-center  z-20 cursor-pointer">
 <img src={isMuted? '/assets/icons/mute.svg':  '/assets/icons/muted.svg' } className='w-5'/>
       </button>
-<video className="w-full h-full object-cover relative z-10" src={'/assets/videos/grow-guide.mp4'} muted  autoPlay loop    ref={videoRef}  />
+<video className="w-full h-full object-cover relative z-10" src={'/assets/videos/grow-guide.webp'} muted  autoPlay loop    ref={videoRef}  />
 </div>
     </section>);
 }

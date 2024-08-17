@@ -7,8 +7,8 @@ const guides =[
         id: 1,
         name: 'Daniela',
     
-        img: '/assets/images/Daniela.jpg',
-        video: '/assets/videos/danielMin.mp4',
+        img: '/assets/images/Daniela.webp',
+        video: '/assets/videos/danielMin.webm',
         mainVideo: '/assets/videos/daniella.mp4',
         rotate: '-3',
         rotateH: '5',
@@ -19,7 +19,7 @@ const guides =[
         id: 2,
         name: 'Sharise',
     
-        img: '/assets/images/sharise.jpg',
+        img: '/assets/images/sharise.webp',
         video: '/assets/videos/shariseMin.mp4',
         mainVideo: '/assets/videos/Sharise.mp4',
         rotate: '3',
@@ -31,8 +31,8 @@ const guides =[
         id: 3,
         name: 'Misha',
     
-        img: '/assets/images/misha.jpg',
-        video: '/assets/videos/MishaMin.mp4',
+        img: '/assets/images/misha.webp',
+        video: '/assets/videos/MishaMin.webm',
         mainVideo: '/assets/videos/Misha.mp4',
         rotate: '-3',
         rotateH: '5',
@@ -43,7 +43,7 @@ const guides =[
         id: 4,
         name: 'Steph',
     
-        img: '/assets/images/steph.jpg',
+        img: '/assets/images/steph.webp',
         video: '/assets/videos/StephMin.mp4',
         mainVideo: '/assets/videos/Steph.mp4',
         rotate: '3',
@@ -54,8 +54,8 @@ const guides =[
     {
         id: 5,
         name: 'Maya',
-        img: '/assets/images/maya-card.jpg',
-        video: '/assets/videos/MayaMin.mp4',
+        img: '/assets/images/maya-card.webp',
+        video: '/assets/videos/MayaMin.webm',
         mainVideo: '/assets/videos/Maya.mp4',
         rotate: '-3',
         rotateH: '5',

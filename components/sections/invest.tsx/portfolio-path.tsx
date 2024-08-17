@@ -52,7 +52,7 @@ Our portfolios are carefully constructed to maximize diversification and optimiz
 </div>
 <div className="flex  gap-8 flex-wrap justify-center  ">
   <div className="flex   flex-col gap-5  w-[500px]  h-[550px]  xs:h-auto  bg-[#2C5957]  rounded-[32px]  items-start p-6  xs:w-full">
-<img src={'/assets/images/rush.jpg'} alt="" className="w-full rounded-[32px] "/>
+<img src={'/assets/images/rush.webp'} alt="" className="w-full rounded-[32px] "/>
 <div className="flex flex-col gap-3">
 <h1 className="font-bold  text-[40px] text-white md:text-2xl">
 Core
@@ -61,7 +61,7 @@ Core
 </div>
   </div>
   <div className="flex   flex-col gap-5  w-[500px]  h-[550px]  bg-[#769c8b]  rounded-[32px]  items-start p-6  xs:h-auto  xs:w-full">
-<img src={'/assets/images/growth.jpg'} alt="" className="w-full rounded-[32px] "/>
+<img src={'/assets/images/growth.webp'} alt="" className="w-full rounded-[32px] "/>
 <div className="flex flex-col gap-3">
 <h1 className="font-bold  text-[40px] text-white md:text-2xl">
 ESG

@@ -3,32 +3,32 @@ import Card from "../../cards";
 const InvestmentPov = () => {
     const pov =[
         {
-            img:'/assets/images/asorbBlue.png',
+            img:'/assets/images/asorbBlue.webp',
             header: 'Keep it simple',
             content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
         },
         {
-            img:'/assets/images/plantBlue.png',
+            img:'/assets/images/plantBlue.webp',
             header: 'Be goal-oriented',
             content: `Every goal needs its own plan. Tell us what you're saving for, your timeline, your needs, and contributions. We'll create a tailored approach with just the right amount of risk to hit your targets.`
         },
         {
-            img:'/assets/images/MeasureBlue.png',
+            img:'/assets/images/MeasureBlue.webp',
             header: 'Keep it simple',
             content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
         },
         {
-            img:'/assets/images/forest.png',
+            img:'/assets/images/forest.webp',
             header: 'Keep it simple',
             content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
         },
         {
-            img:'/assets/images/waterMech.png',
+            img:'/assets/images/waterMech.webp',
             header: 'Keep it simple',
             content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
         },
         {
-            img:'/assets/images/love.png',
+            img:'/assets/images/love.webp',
             header: 'Keep it simple',
             content: 'Asset-based and tiered management fees charged by robo-advisors and legacy firms can be confusing. By not charging those fees, we keep things simple and transparent'
         },

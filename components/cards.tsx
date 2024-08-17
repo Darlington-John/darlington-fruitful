@@ -74,6 +74,7 @@ const Card = (props: any) => {
   const{selectedGuide, setSelectedGuide} = useContext(FruitfulContext);
   const handleButtonClick = () => {
     setSelectedGuide(props.name);  // Set the context value when button is clicked
+    toggleAboutPopup();
   };
 
   const router = useRouter();
@@ -82,7 +83,7 @@ const Card = (props: any) => {
     <>
       {props.guide && (
           <div
-          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative overflow-hidden   4xl:h-[350px]    4xl:w-[260px]    ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
+          className={`bg-lightOrange rounded-xl   w-[230px]   ease-out duration-300 guide drop-shadow-2xl relative hover:z-30 cursor-pointer   dxs:drop-shadow h-[300px] relative    4xl:h-[350px]    4xl:w-[260px] ${pathname ==='/' &&'  overflow-hidden'}    ${selectedGuide === props.name && ' ring-2  ring-green   ring-inset  z-30'}`}
           style={{
             transform: `rotate(${props.rotate}deg) `,
             transition: 'transform  0.3s cubic-bezier(0.17, 0.55, 0.55, 1), width  1s cubic-bezier(0.17, 0.55, 0.55, 1)',

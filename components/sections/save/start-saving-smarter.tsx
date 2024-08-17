@@ -12,7 +12,7 @@ const StartSavingSmarter = ({glowRef3, glow}) => {
   in the market, more than 10x the
   national average.*`,
   header: 'Sky high',
-  img: '/assets/images/seek.png',
+  img: '/assets/images/seek.webp',
   rotate: '2'
     },
     {id: 2,
@@ -21,7 +21,7 @@ account holder† based on
 ownership category through our
 FDIC member partner bank.`,
   header: 'Sky high',
-  img: '/assets/images/measure.png',
+  img: '/assets/images/measure.webp',
     rotate: '-2'
     },
     {id: 3,
@@ -30,7 +30,7 @@ an ideal spot for your emergency,
 short-term, or goal-specific
 savings.`,
   header: 'Simple',
-  img: '/assets/images/together.png',
+  img: '/assets/images/together.webp',
      rotate: '5'
     },
   ];

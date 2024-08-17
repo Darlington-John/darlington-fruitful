@@ -179,22 +179,22 @@ features: [
 
 const floats =[
   {
-src: '/assets/images/push.png',
+src: '/assets/images/push.webp',
 left:0,
 top: 150
 },
 {
-  src: '/assets/images/flower-grow.png',
+  src: '/assets/images/flower-grow.webp',
   right:0,
   top:0
   },
   {
-    src: '/assets/images/pluckf.png',
+    src: '/assets/images/pluckf.webp',
     right:0,
     top:400
     },
     {
-      src: '/assets/images/bounty.png',
+      src: '/assets/images/bounty.webp',
       left:0,
       bottom:0
       },

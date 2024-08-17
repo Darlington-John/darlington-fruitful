@@ -15,7 +15,7 @@ const MishaSpeech = () => {
 stressed about my finances, I feel 
 <br className="md:hidden"/>a lot more in control of my life!”</h1>
 <div className="flex items-center flex-col" style={float}>
-<img src={'/assets/images/misha.jpg'} alt="" className="w-24 h-24  rounded-full  2xs:w-16 2xs:h-16  object-cover  4xl:w-36  4xl:h-36"/>
+<img src={'/assets/images/misha.webp'} alt="" className="w-24 h-24  rounded-full  2xs:w-16 2xs:h-16  object-cover  4xl:w-36  4xl:h-36"/>
 <div className="flex flex-col text-center items-center text-lg  2xs:text-base">
 <h1 className="font-bold"   style={float}>
 Misha
