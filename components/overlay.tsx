@@ -1,11 +1,8 @@
 
 import Link from 'next/link';
 import Accordion from './accordion';
-import { useContext } from 'react';
-import { FruitfulContext } from './context';
 
 const Overlay = () => {
-  const{isOverlayOpen, setIsOverlayOpen} = useContext(FruitfulContext);
   return (
     <div className=" hidden h-[0px] w-full fixed z-40 top-0 right-0 bg-white    md:flex      flex-col gap-16 justify-end  fade ease-out duration-[0.5s]   " id="myOverlay">
       <div className='h-full overflow-scroll  flex     px-4 flex-col gap-16   px-4 pt-40 xs:gap-6'>
