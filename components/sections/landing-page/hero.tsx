@@ -5,6 +5,7 @@ import Layout from "../../layout";
 import Button from "../../buttons";
 import { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
+import Image from "next/image";
 const headerData = [
   { start: 0, end: 1.5, text: 'Maya' },
   { start: 1.5, end: 3, text: 'Andrew' },
@@ -77,7 +78,7 @@ const Home = () => {
     transition: 'width 0.1s ease-out', // Smooth 
     minWidth:' 93%',
   };
-  
+
     return (    
       <>
           <Head>
@@ -85,8 +86,9 @@ const Home = () => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <div className='flex h-screen   relative flex-col md:justify-end  justify-center  mx-auto overflow-hidden rounded-b-2xl'  style={elementStyle}>
-          <video  autoPlay  muted  loop src={"/assets/videos/hero.mp4"}  className='    z-10 top-0  absolute w-full xs:invisible'  style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"/>
-          <video  autoPlay  muted  loop src={"/assets/videos/mobileVid.mp4"}  className='    z-10 top-0  absolute w-full  hidden  xs:block' style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  preload="auto"/>
+
+          <video  autoPlay  muted  loop src={"/assets/videos/hero.mp4"}  className='    z-10 top-0  absolute w-full xs:invisible'  style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  ref={videoRef} preload="auto"poster="/assets/images/hero-big.png"/>
+          <video  autoPlay  muted  loop src={"/assets/videos/mobileVid.mp4"}  className='    z-10 top-0  absolute w-full  hidden  xs:block' style={{height: '100vh', overflow: 'hidden', objectFit: 'cover'}}  preload="auto" poster="/assets/images/hero-mobile.png"/>
           <div className="flex relative items-start z-20 md:py-6">
 <div className="flex flex-col gap-6  items-start w-full px-[66px] md:px-4  text-white md:gap-4 xs:gap-0   3xl:px-[200px]">
   <div className="text-white  text-[90px] leading-[80px] md:leading-none   md:flex gap-2 items-center md:text-[35px] md:flex-wrap  xs:text-3xl  xs:pb-2">
